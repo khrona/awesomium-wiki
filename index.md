@@ -7,6 +7,7 @@ groups:
   - name: General Use
   
 ---
+{% include JB/setup %}
 
 {% for g in page.groups %}
 ## {{ g.name }}
