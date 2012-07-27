@@ -20,8 +20,17 @@ groups:
 
 ## Highlighting Test
 
-{% highlight ruby %}
-def foo
-    puts 'foo'
-end
+{% highlight cpp %}
+#include <Awesomium/WebCore.h>
+
+using namespace Awesomium;
+
+int main() {
+  WebCore* core = WebCore::Initialize(WebConfig());
+  core->CreateWebView(512, 512);
+  
+  core->Shutdown();
+  
+  return 0;
+}
 {% endhighlight %}
