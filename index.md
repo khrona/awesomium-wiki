@@ -21,7 +21,7 @@ groups:
 ## Highlighting Test
 
 {% highlight ruby %}
-    def foo
-      puts 'foo'
-    end
+def foo
+    puts 'foo'
+end
 {% endhighlight %}
