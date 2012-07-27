@@ -17,3 +17,11 @@ groups:
   {% include JB/pages_list %}
 </ul>
 {% endfor %}
+
+## Highlighting Test
+
+{% highlight ruby %}
+    def foo
+      puts 'foo'
+    end
+{% endhighlight %}
