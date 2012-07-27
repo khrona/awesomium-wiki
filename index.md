@@ -12,7 +12,7 @@ groups:
 ## {{ g.name }}
 <ul>
   {% assign pages_list = site.pages %}
-  {% assign group = 'project' %}
+  {% assign group = g.name %}
   {% include JB/pages_list %}
 </ul>
 {% endfor %}
