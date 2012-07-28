@@ -376,6 +376,10 @@ footer {
   header {
     padding-right:320px;
   }
+  
+  header p, header h3 {
+    display: none;
+  }
 
   section {
     padding:20px 84px 20px 50px;
