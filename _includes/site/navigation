@@ -1,8 +1,10 @@
-        <h2 class="header"><a href="{{ HOME_PATH }}">{{ site.title }}</a></h2>
+        <h1 class="header"><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
         <p class="header"></p>
         
+        <h3 class="header">Categories</h3>
         {% for g in site.groups %}
         <p class="header"><a href="#">{{ g.name }}</a></p>
         {% endfor %}
 
+        <h3 class="header">Useful Links</h3>
         <p class="header">Go to <a href="http://www.awesomium.com">awesomium.com</a></p>
