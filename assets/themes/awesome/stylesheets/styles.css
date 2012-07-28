@@ -226,10 +226,10 @@ p.header {
 	font-size: 16px;
 }
 
-h1.header {
+h1.header, h1.header a {
 	/*font-family: Arvo, sans-serif;*/
 	font-size: 24px;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.3em;
 	border-bottom: none;
 	margin-top: 5px;
@@ -238,6 +238,7 @@ h1.header {
 h3.header {
   font-size: 16px;
   color: #FDFDFB;
+  font-weight: 300;
 }
 
 h1.header, a.header, a.name, header a{
