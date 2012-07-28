@@ -198,7 +198,7 @@ td {
 
 /* Wrapper */
 .wrapper {
-  width:960px;
+  width:1000px;
 }
 
 
@@ -207,7 +207,7 @@ td {
 header {
 	background-color: #171717;
 	color: #FDFDFB;
-  width:170px;
+  width:210px;
   float:left;
   position:fixed;
 	border: 1px solid #000;
@@ -330,7 +330,7 @@ footer {
 	padding-left: 50px;
 }
 
-@media print, screen and (max-width: 960px) {
+@media print, screen and (max-width: 1000px) {
 
   div.wrapper {
     width:auto;
