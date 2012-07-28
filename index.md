@@ -19,23 +19,4 @@ Here you'll find tips, tricks, and tutorials for using the library in your own a
   {% assign group = g.name %}
   {% include JB/pages_list %}
 </ul>
-
-
 {% endfor %}
-
-### Highlighting Test
-
-{% highlight cpp %}
-#include <Awesomium/WebCore.h>
-
-using namespace Awesomium;
-
-int main() {
-  WebCore* core = WebCore::Initialize(WebConfig());
-  core->CreateWebView(512, 512);
-  
-  core->Shutdown();
-  
-  return 0;
-}
-{% endhighlight %}
