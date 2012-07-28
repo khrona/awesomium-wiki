@@ -20,17 +20,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header"><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
-        <p class="header"></p>
-
-        <ul>
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-        </ul>
-
-        <p class="header">Go to <a href="http://www.awesomium.com">awesomium.com</a></p>
-
+      {% include site/navigation %}
       </header>
   <body>
       <section>

@@ -12,10 +12,14 @@ pygments: true
 title : Awesomium Wiki
 tagline: Wiki for Awesomium, a Web UI Bridge for Native Apps
 author :
-  name : Adam Simmons
-  email : adam@khrona.com
+  name : Awesomium Team
+  email : contact@khrona.com
   github : khrona
   twitter : awesomium
+  
+groups:
+  - name: Getting Started
+  - name: General Use
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
