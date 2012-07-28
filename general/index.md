@@ -1,6 +1,6 @@
 ---
 layout: page
-title : Category - Getting Started
+title : Category - General Use
 group: Categories
 
 ---
@@ -8,6 +8,6 @@ group: Categories
 
 <ul>
   {% assign pages_list = site.pages %}
-  {% assign group = 'Getting Started' %}
+  {% assign group = 'General Use' %}
   {% include JB/pages_list %}
 </ul>
