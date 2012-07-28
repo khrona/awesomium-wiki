@@ -250,6 +250,7 @@ h1.header img {
 h1.header img.delimiter {
   margin-top: -3px;
   padding-right: 9px;
+}
 
 h1.header div.clear {
   clear: both;
