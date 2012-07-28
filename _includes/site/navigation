@@ -3,7 +3,7 @@
         
         <h3 class="header">Categories</h3>
         {% for g in site.groups %}
-        <p class="header"><a href="#">{{ g.name }}</a></p>
+        <p class="header"><a href="{{ BASE_PATH }}{{g.path}}">{{ g.name }}</a></p>
         {% endfor %}
 
         <h3 class="header">Useful Links</h3>

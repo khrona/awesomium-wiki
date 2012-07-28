@@ -19,7 +19,9 @@ author :
   
 groups:
   - name: Getting Started
+    path: getting-started
   - name: General Use
+    path: general-use
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
