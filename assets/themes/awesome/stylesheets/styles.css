@@ -245,6 +245,7 @@ h1.header img {
   float: left;
   margin-top: -12px;
   padding-right: 5px;
+  margin-bottom: 12px;
 }
 
 h1.header img.delimiter {
