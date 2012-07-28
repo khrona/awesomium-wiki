@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/stylesheets/styles.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/stylesheets/pygment_trac.css" rel="stylesheet">
+    <script src="{{ ASSET_PATH }}/javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
+        <p class="header"></p>
+
+        <ul>
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+        </ul>
+
+        <p class="header">Go to <a href="http://www.awesomium.com">awesomium.com</a></p>
+
+      </header>
+  <body>
+      <section>
+        {{ content }}
+      </section>
+
+      <footer>
+        <p><small>&copy; {{ site.author.name }} 2012</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    {% include JB/analytics %}
+  </body>
+</html>
