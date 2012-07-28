@@ -2,7 +2,7 @@
         <p class="header"></p>
         
         {% for g in site.groups %}
-        <h4>{{ g.name }}</h4>
+        <h4 class="header">{{ g.name }}</h4>
         {% endfor %}
 
         <p class="header">Go to <a href="http://www.awesomium.com">awesomium.com</a></p>
