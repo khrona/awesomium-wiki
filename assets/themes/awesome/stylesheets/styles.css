@@ -235,6 +235,11 @@ h1.header {
 	margin-top: 5px;
 }
 
+h3.header {
+  font-size: 16px;
+  color: #FDFDFB;
+}
+
 h1.header, a.header, a.name, header a{
 	color: #fff;
 }
