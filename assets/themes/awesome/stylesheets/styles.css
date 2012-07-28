@@ -355,7 +355,10 @@ footer {
 }
 
 @media print, screen and (max-width: 1000px) {
-
+  body {
+    padding: 0;
+  }
+  
   div.wrapper {
     width:auto;
     margin:0;
@@ -372,9 +375,16 @@ footer {
 		margin:0 84px 0 50px;
 		padding:0;
 	}
+	
+  div.page-header h2 {
+    padding-top: 0;
+  }
 
   header {
-    padding-right:320px;
+	padding: 20px;
+	margin: 0px;
+	width: 100%;
+	border: 0;
   }
   
   header p, header h3 {
@@ -403,15 +413,17 @@ footer {
   }
 
   header {
-    padding:10px 20px 0;
-		margin-right: 0;
+	padding: 20px;
+	margin: 0px;
+	width: 100%;
+	border: 0;
   }
   
   header p, header h3 {
     display: none;
   }
 
-	section {
+  section {
     padding:10px 0 10px 20px;
     margin:0 0 30px;
   }
