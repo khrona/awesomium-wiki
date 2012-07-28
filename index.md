@@ -13,7 +13,7 @@ Awesomium is a Web UI Bridge for Native Applications. Leverage HTML/JS/CSS to bu
 Here you'll find tips, tricks, and tutorials for using the library in your own apps.
 
 {% for g in page.groups %}
-## {{ g.name }}
+### {{ g.name }}
 <ul>
   {% assign pages_list = site.pages %}
   {% assign group = g.name %}
@@ -23,7 +23,7 @@ Here you'll find tips, tricks, and tutorials for using the library in your own a
 
 {% endfor %}
 
-## Highlighting Test
+### Highlighting Test
 
 {% highlight cpp %}
 #include <Awesomium/WebCore.h>
