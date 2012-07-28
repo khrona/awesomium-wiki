@@ -1,4 +1,7 @@
-        <h1 class="header"><a href="{{ HOME_PATH }}"><img src="{{ ASSET_PATH }}/images/awe-trans-icon-logo.png" />Wiki</a></h1>
+        <h1 class="header">
+          <a href="{{ HOME_PATH }}"><img src="{{ ASSET_PATH }}/images/awe-trans-icon-logo.png" />Wiki</a>
+          <div class="clear"></div>
+        </h1>
         <p class="header"></p>
         
         <h3 class="header">Categories</h3>
