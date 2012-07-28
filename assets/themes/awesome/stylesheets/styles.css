@@ -259,7 +259,9 @@ h1.header div.clear {
 h3.header {
   font-size: 16px;
   color: #FDFDFB;
-  font-weight: 400;
+  font-weight: 500;
+  border: none;
+  padding-bottom: 0;
 }
 
 h1.header, a.header, a.name, header a{
