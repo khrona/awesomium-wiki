@@ -393,10 +393,14 @@ footer:hover {
   }
 
   header {
-	padding: 20px;
+	padding: 0px;
 	margin: 0px;
 	width: 100%;
 	border: 0;
+  }
+  
+  header h1 {
+    padding: 15px;
   }
   
   header p, header h3 {
