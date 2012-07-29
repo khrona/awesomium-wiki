@@ -384,6 +384,17 @@ footer:hover {
     width:auto;
     margin:0;
   }
+  
+  #main-site-link {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 50px;
+  }
+  
+  #main-site-link a {
+    color: white;
+  }
 
   header, section, footer {
     float:none;
