@@ -153,7 +153,7 @@ img {
 /* Code blocks */
 
 code, pre {
-	font-family: Consolas,"Liberation Mono",Courier,monospace
+  font-family: Consolas,"Liberation Mono",Courier,monospace;
   color:#000;
   font-size:12px;
 }
