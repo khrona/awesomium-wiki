@@ -32,8 +32,6 @@ groups:
     path: /third-party-wrappers
   - name: Licensing
     path: /licensing
-  - name: Porting Notes
-    path: /porting-notes
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
