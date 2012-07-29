@@ -37,20 +37,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-footer p {
-  margin: 0;
-}
-
-footer {
-  -webkit-transition: opacity 200ms ease;
-  opacity: 0.6;
-  z-index: -1;
-}
-
-footer:hover {
-  opacity: 1.0;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color:#232323;
   margin:36px 0 10px;
@@ -361,11 +347,23 @@ section {
 /* Footer */
 
 footer {
-  width:170px;
+  width:180px;
   float:left;
   position:fixed;
   bottom:10px;
-	padding-left: 50px;
+  padding-left: 30px;
+  -webkit-transition: opacity 300ms ease;
+  opacity: 0.6;
+  z-index: -1;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer:hover {
+  opacity: 1.0;
 }
 
 @media print, screen and (max-width: 1000px) {
