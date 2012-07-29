@@ -201,6 +201,14 @@ td {
   width:1000px;
 }
 
+#main-site-link {
+  position: absolute;
+  left: 850px;
+  width: 150px;
+  height: 25px;
+  padding-top: 2px;
+  text-align: center;
+}
 
 /* Header */
 
