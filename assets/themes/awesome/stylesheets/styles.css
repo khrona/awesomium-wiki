@@ -42,7 +42,7 @@ footer p {
 }
 
 footer {
-  transition: opacity 500ms;
+  -webkit-transition: opacity 500ms;
   opacity: 0.6;
   z-index: -1;
 }
