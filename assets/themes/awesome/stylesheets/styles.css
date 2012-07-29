@@ -403,6 +403,10 @@ footer:hover {
     padding: 15px;
   }
   
+  h1.header, h1.header a {
+    margin-top: 0;
+  }
+  
   header p, header h3 {
     display: none;
   }
@@ -426,13 +430,6 @@ footer:hover {
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap:break-word;
-  }
-
-  header {
-	padding: 20px;
-	margin: 0px;
-	width: 100%;
-	border: 0;
   }
   
   header p, header h3 {
