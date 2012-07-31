@@ -11,7 +11,8 @@ Let's make a new category named "My Category" with a path of "/my-category"
 1. Create a folder named "my-category" in the root of the repo.
 2. Create a file named "index.md" inside this folder
 3. Add the following text to this file (modify it as needed):
-   	---
+
+		---
 		layout: page
 		title : Category - My Category
 		group: Categories
