@@ -41,9 +41,11 @@ Before running your executable, __make sure to copy the entire contents__ of the
 ### Include the API
 To include the entire API for Awesomium in your source files, you simply need to include WebCore.h:
 
-    #include <Awesomium/WebCore.h>
+{% highlight cpp %}
+#include <Awesomium/WebCore.h>
+{% endhighlight %}
    
 ### Read some more articles
-* Basic Concepts
+* [Basic Concepts](basic-concepts.html)
 
 
