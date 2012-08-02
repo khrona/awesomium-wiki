@@ -12,7 +12,7 @@ This tutorial assumes that you are developing a C++ Application. If you want to 
 ### Checklist
 You will need the following:
 
-* The latest Awesomium v1.7 SDK for Windows (download it here)
+* The latest Awesomium v1.7 SDK for Windows (download it [here](http://www.awesomium.com/download/))
 * Microsoft Visual C++ (there is a free 'Express' version)
 
 ### Install the SDK
@@ -41,9 +41,7 @@ Before running your executable, __make sure to copy the entire contents__ of the
 ### Include the API
 To include the entire API for Awesomium in your source files, you simply need to include WebCore.h:
 
-{% highlight cpp %}
-#include <Awesomium/WebCore.h>
-{% endhighlight %}
+    #include <Awesomium/WebCore.h>
    
 ### Read some more articles
 * [Basic Concepts](basic-concepts.html)
