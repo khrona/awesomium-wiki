@@ -14,5 +14,7 @@ Awesomium is a Web UI Bridge for Native Applications. Leverage HTML/JS/CSS to bu
 
 Here you'll find tips, tricks, and tutorials for using the library in your own apps. All articles are compatible with the latest version of 1.7 only.
 
-{% for g in site.groups %}### {{ g.name }}
-<ul>{% assign pages_list = site.pages %}{% assign group = g.name %}{% include JB/pages_list %}</ul>{% endfor %}
+{% for g in site.groups %}
+### {{ g.name }}
+<ul>{% assign pages_list = site.pages %}{% assign group = g.name %}{% include JB/pages_list %}</ul>
+{% endfor %}
