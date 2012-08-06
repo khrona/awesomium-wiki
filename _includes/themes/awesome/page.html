@@ -1,6 +1,4 @@
-{% if page.group == null %}
-  <p></p>
-{% else %}
+{% if page.group %}
   {% for g in site.groups %}
     {% if page.group == g.name %}
     <p class="breadcrumb">
@@ -10,6 +8,8 @@
     {% endif %}
   {% endfor %}
 {% endif %}
+
+<div>TEST CHANGE</div>
 
 <div class="page-header">
   <h2>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h2>
