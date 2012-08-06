@@ -510,7 +510,7 @@ footer:hover {
 	height: 28px;
 	width: 77px;
 	border: 1px solid #979797;
-	border-radius: 20px;
+	border-radius: 4px;
 	box-shadow: inset 0 1px 3px #BABABA, inset 0 12px 3px 2px rgba(232, 232, 232, 0.5);
 	cursor: pointer;
 	overflow: hidden;
@@ -524,7 +524,7 @@ footer:hover {
 	height: 28px;
 	width: 0px;
 	position: absolute;
-	border-radius: 20px;
+	border-radius: 4px;
 	-webkit-box-shadow: inset 0 1px 2px #0063B7, inset 0 12px 3px 2px rgba(0, 127, 234, 0.5);
 	box-shadow: inset 0 1px 2px #0063B7, inset 0 12px 3px 2px rgba(0, 127, 234, 0.5);
 	background-color: #6699ff; 
@@ -540,7 +540,7 @@ footer:hover {
 	top: 0;
 	z-index: 3;
 	border: solid 1px #919191;
-	border-radius: 28px;
+	border-radius: 4px;
 	box-shadow: inset 0 2px 1px white, inset 0 -2px 1px white;
 	background-color: #CECECE;
 	background-image: -webkit-linear-gradient(#CECECE, #FBFBFB);
@@ -569,7 +569,7 @@ footer:hover {
 	border: none;
 	position: absolute;
 	top: 2px;
-	left: -37px;
+	left: -38px;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -579,7 +579,7 @@ footer:hover {
 	height: 18px;
 	border: none;
 	position: absolute;
-	right: -39px;
+	right: -41px;
 	top: 2px;
 	font-size: 16px;
 	font-weight: bold;
