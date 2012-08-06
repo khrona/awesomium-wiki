@@ -562,8 +562,6 @@ footer:hover {
 	content: "C++";
 	display: block;
 	height: 18px;
-	background-color: white;
-	box-shadow: 0px -1px 1px #666;
 	border: none;
 	position: absolute;
 	top: 0px;
@@ -577,7 +575,7 @@ footer:hover {
 	height: 18px;
 	border: none;
 	position: absolute;
-	right: -37px;
+	right: -39px;
 	top: 0px;
 	font-size: 16px;
 	font-weight: bold;
