@@ -231,7 +231,18 @@ header {
 }
 
 div.page-header h2 {
-    padding-top: 29px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+div.page-header {
+    padding-top: 15px;
+    margin-top: 26px;
+}
+
+div.page-header p.breadcrumb {
+  padding: 0;
+  margin: 0;
 }
 
 p.header {
