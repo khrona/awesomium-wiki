@@ -501,12 +501,12 @@ footer:hover {
 }
 
 .switch-container {
-    width: 190px;
+    width: 195px;
 }
 
 .switch {
     float: right;
-    margin-top: -5px;
+    margin-top: -24px;
 	height: 28px;
 	width: 77px;
 	border: 1px solid #979797;
