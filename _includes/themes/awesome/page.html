@@ -1,7 +1,7 @@
 {% if page.group == null %}
 {% else %}
   {% for g in site.groups %}
-    {% if page.group == g %}
+    {% if page.group == g.name %}
     <p class="breadcrumb">
       <a href="/">Home</a> <span class="sep">→</span>
       <a href="{{ BASE_PATH }}{{g.path}}">{{ g.name }}</a> <span class="sep">→</span>
