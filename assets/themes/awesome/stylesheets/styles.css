@@ -423,6 +423,11 @@ footer:hover {
   div.page-header h2 {
     padding-top: 0;
   }
+  
+  div.page-header {
+    padding-top: 5px;
+    margin-top: 10px;
+  }
 
   header {
 	padding: 0px;
