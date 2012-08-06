@@ -559,25 +559,26 @@ footer:hover {
 	background-image: none;
 }
 .switch > .thumb::before {
-	content: "";
+	content: "C++";
 	display: block;
-	height: 14px;
-	width: 2px;
+	height: 18px;
 	background-color: white;
 	box-shadow: 0px -1px 1px #666;
 	border: none;
 	position: absolute;
-	top: 6px;
-	left: -24px;
+	top: 0px;
+	left: -37px;
+	font-size: 16px;
+	font-weight: bold;
 }
 .switch > .thumb::after {
-	content: "";
+	content: ".NET";
 	display: block;
-	height: 10px;
-	width: 10px;
-	border-radius: 10px;
-	border: solid 2px #777;
+	height: 18px;
+	border: none;
 	position: absolute;
-	right: -32px;
-	top: 6px;
+	right: -37px;
+	top: 0px;
+	font-size: 16px;
+	font-weight: bold;
 }
