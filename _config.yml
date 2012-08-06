@@ -28,8 +28,6 @@ groups:
     path: /graphics-integration
   - name: JavaScript Integration
     path: /javascript-integration
-  - name: .NET Tips and Tricks
-    path: /net-tips-and-tricks
   - name: Third-Party Wrappers
     path: /third-party-wrappers
   - name: Licensing
