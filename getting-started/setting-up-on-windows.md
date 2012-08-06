@@ -2,6 +2,7 @@
 layout: page
 title : Setting Up on Windows
 group: Getting Started
+weight: 1
 
 ---
 

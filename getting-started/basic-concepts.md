@@ -2,6 +2,7 @@
 layout: page
 title : Basic Concepts
 group: Getting Started
+weight: 3
 
 ---
 {% include JB/setup %}

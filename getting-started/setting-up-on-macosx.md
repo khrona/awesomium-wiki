@@ -2,6 +2,7 @@
 layout: page
 title : Setting Up on Mac OSX
 group: Getting Started
+weight: 2
 
 ---
 
