@@ -6,7 +6,7 @@
         </h1>
         <p class="header"></p>
         
-        <h3 class="header switch-container">Select API 
+        <h3 class="header switch-container">Switch API 
           <div class="switch on"><span class="thumb"></span><input type="checkbox" /></div>
         </h3>
         
