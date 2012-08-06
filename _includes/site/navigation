@@ -6,8 +6,10 @@
         </h1>
         <p class="header"></p>
         
-        <h3 class="header switch-container">Switch API 
+        <h3 class="header switch-container">
+          <div class="switch-text">Switch API</div>
           <div class="switch on"><span class="thumb"></span><input type="checkbox" /></div>
+          <div class="clear"></div>
         </h3>
         
         

@@ -520,6 +520,14 @@ footer:hover {
     width: 195px;
 }
 
+.switch-container .switch-text {
+  float: left;
+}
+
+.switch-container .clear {
+  clear: both;
+}
+
 .switch {
     float: right;
     margin-top: -6px;
