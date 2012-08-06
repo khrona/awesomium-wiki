@@ -500,7 +500,13 @@ footer:hover {
   }
 }
 
+.switch-container {
+    width: 190px;
+}
+
 .switch {
+    float: right;
+    margin-top: -5px;
 	height: 28px;
 	width: 77px;
 	border: 1px solid #979797;
@@ -562,7 +568,7 @@ footer:hover {
 	height: 18px;
 	border: none;
 	position: absolute;
-	top: 0px;
+	top: 2px;
 	left: -37px;
 	font-size: 16px;
 	font-weight: bold;
@@ -574,7 +580,7 @@ footer:hover {
 	border: none;
 	position: absolute;
 	right: -39px;
-	top: 0px;
+	top: 2px;
 	font-size: 16px;
 	font-weight: bold;
 }
