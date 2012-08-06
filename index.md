@@ -16,5 +16,5 @@ Here you'll find tips, tricks, and tutorials for using the library in your own a
 
 {% for g in site.groups %}
 ### {{ g.name }}
-<ul>{% assign pages_list = site.pages %}{% assign group = g.name %}{% include JB/pages_list %}</ul>
+<ul class="truncate">{% assign pages_list = site.pages %}{% assign group = g.name %}{% include JB/pages_list %}</ul>
 {% endfor %}

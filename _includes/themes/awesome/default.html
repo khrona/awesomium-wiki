@@ -14,7 +14,20 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/stylesheets/styles.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/stylesheets/pygment_trac.css" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+	$(document).ready(function() {
+		  $('ul.truncate')
+		  .find('li:gt(5)')
+		  .hide()
+		  .end()
+		  .append(
+			$('<li>Show More...</li>').click( function(){
+			  $(this).siblings(':hidden').show().end().remove();
+			})
+		  );
+	});
+	</script>
   </head>
   <body>
     <div class="wrapper">
