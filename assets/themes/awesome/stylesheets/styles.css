@@ -92,7 +92,13 @@ a small {
 li.show-more {
   color: #C30000;
   font-weight: 400;
-  cursor: hand;
+  cursor: pointer;
+  list-style-type: none;
+  padding-left: 50px;
+}
+
+li.show-more:hover {
+  text-decoration: underline;
 }
 
 em {
