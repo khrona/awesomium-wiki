@@ -501,12 +501,10 @@ footer:hover {
 }
 
 .switch {
-	float: right;
 	height: 28px;
 	width: 77px;
 	border: 1px solid #979797;
 	border-radius: 20px;
-	margin-top: -5px;
 	box-shadow: inset 0 1px 3px #BABABA, inset 0 12px 3px 2px rgba(232, 232, 232, 0.5);
 	cursor: pointer;
 	overflow: hidden;
@@ -523,7 +521,7 @@ footer:hover {
 	border-radius: 20px;
 	-webkit-box-shadow: inset 0 1px 2px #0063B7, inset 0 12px 3px 2px rgba(0, 127, 234, 0.5);
 	box-shadow: inset 0 1px 2px #0063B7, inset 0 12px 3px 2px rgba(0, 127, 234, 0.5);
-	background-color: #64B1F2;
+	background-color: #6699ff; 
 }
 .switch.on::before {
 	width: 77px;

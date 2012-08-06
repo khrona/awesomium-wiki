@@ -6,6 +6,7 @@
         </h1>
         <p class="header"></p>
         
+        <h3 class="header">Select API</h3>
         <div class="switch on"><span class="thumb"></span><input type="checkbox" /></div>
         
         <script>
