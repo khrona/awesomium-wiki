@@ -89,6 +89,12 @@ a small {
 	font-size: 12px;
 }
 
+li.show-more {
+  color: #C30000;
+  font-weight: 400;
+  cursor: hand;
+}
+
 em {
 	font-style: italic;
 }

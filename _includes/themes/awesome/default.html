@@ -17,7 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>
 	$(document).ready(function() {
-		$('ul').each(function(){
+		$('ul.truncate').each(function(){
 		  var max = 4
 		  if ($(this).find("li").length > max) {
 			$(this)
@@ -25,7 +25,7 @@
 			  .hide()
 			  .end()
 			  .append(
-				$('<li>Show More...</li>').click( function(){
+				$('<li class="show-more">Show More...</li>').click( function(){
 				  $(this).siblings(':hidden').show().end().remove();
 				})
 			);
