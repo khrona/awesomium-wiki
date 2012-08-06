@@ -5,6 +5,4 @@ group: Getting Started
 
 ---
 
-# Setting Up on Mac OSX
-
-This is how you set up Awesomium on Mac OSX.
+_This article is still under construction. Check back later._
