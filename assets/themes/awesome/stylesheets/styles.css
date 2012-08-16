@@ -225,7 +225,8 @@ td {
 /* Header */
 
 header {
-	background-color: #0456F8;
+	background-color: #3d74da;
+	background-image: -webkit-radial-gradient(40% 20%, ellipse cover, #637DDE 0%, #3553C0 100%)
 	color: #FDFDFB;
   width:210px;
   float:left;
