@@ -74,6 +74,8 @@ By the way, `WSLit()` is a special helper function that lets you declare __WebSt
 
 ##### Wait Until the Page Has Finished Loading
 
+Now we need to wait for the view to finish loading the page. The easiest way to do this is to loop until `WebView::IsLoading` returns false. It's important that you always call `WebCore::Update` within your update loop to give the framework a chance to dispatch events.
+
 {% highlight cpp %}
 // Wait for our WebView to finish loading
 while (view->IsLoading())
@@ -86,6 +88,10 @@ web_core->Update();
 {% endhighlight %}
 
 #### Save the Rendered Page to a JPEG
+
+Since our WebView is being rendered offscreen, we need to save our rendering surface to a JPEG so we can see the result.
+
+You can access the surface of all offscreen WebViews by calling `WebView::surface()`. You will need to cast this surface to `BitmapSurface` (the default Surface type) to actually use it.
 
 {% highlight cpp %}
 // Get the WebView's rendering Surface. The default Surface is of
@@ -102,5 +108,13 @@ if (surface != 0) {
 {% endhighlight %}
 
 #### Clean Up
+
+Make sure to clean up everything that you create:
+
+{% highlight cpp %}
+view->Destroy();
+
+WebCore::Shutdown();
+{% endhighlight %}
 
 ### Further Reading
