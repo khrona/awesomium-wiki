@@ -2,7 +2,7 @@
 
 This is the online wiki for Awesomium, a Web UI Bridge for Native Apps.
 
-Check it out at: <http://khrona.github.com/awesomium-wiki>
+Check it out at: <http://wiki.awesomium.com>
 
 ## To Create a New Category
 
