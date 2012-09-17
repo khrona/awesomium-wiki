@@ -22,12 +22,6 @@ Create a new file called __main.cc__ and add the following code to it:
 #include <Awesomium/WebCore.h>
 #include <Awesomium/BitmapSurface.h>
 #include <Awesomium/STLHelpers.h>
-#include <iostream>
-#if defined(__WIN32__) || defined(_WIN32)
-#include <windows.h>
-#elif defined(__APPLE__)
-#include <unistd.h>
-#endif
 
 // Various macro definitions
 #define WIDTH   800
@@ -36,33 +30,35 @@ Create a new file called __main.cc__ and add the following code to it:
 
 using namespace Awesomium;
 
-// Forward declaration of our update function
-void Update(int sleep_ms);
-
 // Our main program
 int main() {
 
-  // Your program goes here.
+  // Your code goes here.
   
   return 0;
-}
-
-void Update(int sleep_ms) {
-  // Sleep a specified amount
-#if defined(__WIN32__) || defined(_WIN32)
-  Sleep(sleep_ms);
-#elif defined(__APPLE__)
-  usleep(sleep_ms * 1000);
-#endif
-
-  // Put your Update code here.
 }
 {% endhighlight %}
 
 
 #### Initialize the Framework
 
+The first thing we need to do in our program is initialize the WebCore. The WebCore singleton is resposible for creating views, loading resources, and dispatching events.
+
+Let's initialize the WebCore using the default configuration settings, add the following to your `main()`:
+
+{% highlight cpp %}
+// Create the WebCore singleton with default configuration
+WebCore* web_core = WebCore::Initialize(WebConfig());
+{% endhighlight %}
+
 #### Create the WebView
+
+Now we can create a WebView (similar to a tab in Chrome) using the WebCore we just created. Let's create a WebView with the default settings (offscreen rendering surface, all session data will be stored in memory):
+
+{% highlight cpp %}
+// Create a new WebView instance with a certain width and height
+WebView* view = web_core->CreateWebView(WIDTH, HEIGHT);
+{% endhighlight %}
 
 #### Load a Page
 
