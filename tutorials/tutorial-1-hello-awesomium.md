@@ -62,9 +62,44 @@ WebView* view = web_core->CreateWebView(WIDTH, HEIGHT);
 
 #### Load a Page
 
+Let's start loading a web-page into our view. It's a good time to mention that most API calls in Awesomium are asynchronous (they are not guaranteed to complete by the time the method returns).
+
+{% highlight cpp %}
+// Load a certain URL into our WebView instance
+WebURL url(WSLit(URL));
+view->LoadURL(url);
+{% endhighlight %}
+
+By the way, `WSLit()` is a special helper function that lets you declare __WebString literals__. Most of our API uses UTF-16 strings (wrapped with `WebString`) but we added `WSLit()` so you can declare ASCII C-strings with minimal fuss.
+
 ##### Wait Until the Page Has Finished Loading
 
+{% highlight cpp %}
+// Wait for our WebView to finish loading
+while (view->IsLoading())
+  web_core->Update();
+  
+// Sleep a bit and update once more to give scripts and plugins
+// on the page a chance to finish loading.
+Sleep(300);
+web_core->Update();
+{% endhighlight %}
+
 #### Save the Rendered Page to a JPEG
+
+{% highlight cpp %}
+// Get the WebView's rendering Surface. The default Surface is of
+// type 'BitmapSurface', we must cast it before we can use it.
+BitmapSurface* surface = (BitmapSurface*)view->surface();
+
+// Make sure our surface is not NULL-- it may be NULL if the WebView 
+// process has crashed.
+if (surface != 0) {
+  // Save our BitmapSurface to a JPEG image in the current
+  // working directory.
+  surface->SaveToJPEG(WSLit("./result.jpg"));
+}
+{% endhighlight %}
 
 #### Clean Up
 
