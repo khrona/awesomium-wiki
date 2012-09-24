@@ -2,7 +2,7 @@
 layout: page
 title : Loading Remote Assets
 group: General Use
-weight: 4
+weight: 6
 
 ---
 

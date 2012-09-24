@@ -21,7 +21,8 @@ The WebCore creates a default, in-memory WebSession upon initialization. This se
 You can create a WebSession like so:
 
 {% highlight cpp %}
-WebSession* my_session = web_core->CreateWebSession(WSLit("C:\\Session Data Path"), WebPreferences());
+WebSession* my_session = web_core->CreateWebSession(
+  WSLit("C:\\Session Data Path"), WebPreferences());
 {% endhighlight %}
 
 This session will synchronize all of its data to `C:\\Session Data Path\`.
@@ -45,7 +46,8 @@ WebSession* my_session = web_core->CreateWebSession(WSLit(""), prefs);
 It is your responsibility to call WebSession::Release once you are done using the WebSession. If you forget to do this we can't guarantee that your WebSession will be saved to disk upon application exit.
 
 {% highlight cpp %}
-WebSession* my_session = web_core->CreateWebSession(WSLit(""), WebPreferences());
+WebSession* my_session = web_core->CreateWebSession(
+  WSLit(""), WebPreferences());
   
 my_session->Release();
 {% endhighlight %}
