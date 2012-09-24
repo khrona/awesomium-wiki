@@ -4,11 +4,12 @@
       <a href="/">Home</a> <span class="sep">→</span>
       <a href="{{ BASE_PATH }}{{g.path}}">{{ g.name }}</a> <span class="sep">→</span>
     </p>
-  {% endif %}{% endfor %}{% else %}{% if page.group == 'Categories' %}
+  {% endif %}{% endfor %}{% endif %}
+  {% if page.group == 'Categories' %}
     <p class="breadcrumb">
       <a href="/">Home</a> <span class="sep">→</span>
     </p>
-  {% endif %}{% endif %}
+  {% endif %}
   <h2>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h2>
 </div>
 
