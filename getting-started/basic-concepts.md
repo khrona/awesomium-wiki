@@ -80,10 +80,11 @@ A WebSession is responsible for storing all user-generated data (cookies, cache,
 You can create a WebSession like so:
 
 {% highlight cpp %}
-WebSession* my_session = web_core->CreateWebSession(WSLit("C:\\Session Data Path"), WebPreferences());
+WebSession* my_session = web_core->CreateWebSession(
+  WSLit("C:\\Session Data Path"), WebPreferences());
 {% endhighlight %}
 
-__See [this article](../general-use/using-web-sessions.html) for more information about WebSessions.__
+__See [this article](../general-use/using-web-sessions.html) for more info about WebSessions.__
 
 ### The WebView
 A WebView is like a tab in a browser. You load pages into a WebView, interact with it, and render it on-the-fly to a certain graphics surface. You create WebViews using the WebCore, here's an example:
@@ -93,7 +94,9 @@ A WebView is like a tab in a browser. You load pages into a WebView, interact wi
 WebView* my_web_view = web_core->CreateWebView(500, 500);
 {% endhighlight %}
 
-There are two types of WebViews: offscreen and windowed. __See [this article](../general-use/introduction-to-web-views.html) for more information about using each.__
+There are two types of WebViews: __offscreen__ and __windowed__. 
+
+__See [this article](../general-use/introduction-to-web-views.html) for more info about WebViews.__
  
 #### Handling WebView Events
 The WebViewListener namespace contains a suite of special classes that you can use to respond to certain events in a WebView.
