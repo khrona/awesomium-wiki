@@ -83,29 +83,9 @@ You can create a WebSession like so:
 WebSession* my_session = web_core->CreateWebSession(WSLit("C:\\Session Data Path"), WebPreferences());
 {% endhighlight %}
 
-#### Specifying Custom Preferences
-You can supply custom preferences for each WebSession via the second parameter. Here's an example:
+__See [this article](../general-use/using-web-sessions.html) for more information about WebSessions.__
 
-{% highlight cpp %}
-WebPreferences prefs;
-prefs.enable_plugins = false;
-prefs.enable_smooth_scrolling = true;
-prefs.user_stylesheet = WSLit("* { background-color: yellow !important; }");
-
-// Create an in-memory session (empty path) with our custom preferences
-WebSession* my_session = web_core->CreateWebSession(WSLit(""), prefs);
-{% endhighlight %}
- 
-#### Destroying the WebSession
-It is your responsibility to call WebSession::Release once you are done using the WebSession. If you forget to do this we can't guarantee that your WebSession will be saved to disk upon application exit.
-
-{% highlight cpp %}
-WebSession* my_session = web_core->CreateWebSession(WSLit(""), WebPreferences());
-  
-my_session->Release();
-{% endhighlight %}
-
-#### The WebView
+### The WebView
 A WebView is like a tab in a browser. You load pages into a WebView, interact with it, and render it on-the-fly to a certain graphics surface. You create WebViews using the WebCore, here's an example:
 
 {% highlight cpp %}
@@ -113,17 +93,7 @@ A WebView is like a tab in a browser. You load pages into a WebView, interact wi
 WebView* my_web_view = web_core->CreateWebView(500, 500);
 {% endhighlight %}
 
-There are two types of WebViews: offscreen and windowed. See [this article](../general-use/introduction-to-web-views.html) for more information about using each.
-
-#### Specifying a WebSession for each WebView
-You can specify which WebSession to use for each WebView via the third parameter of WebCore::CreateWebView. If you specify NULL, a default in-memory WebSession will be used instead. Here's an example of use:
-
-{% highlight cpp %}
-WebSession* my_session = web_core->CreateWebSession(WSLit(""), WebPreferences());
-WebView* my_web_view = web_core->CreateWebView(500, 500, my_session);
-{% endhighlight %}
-
-Using the above API you can have one or more WebSessions per application, and each WebSession can be used with one or more WebViews. This is useful for isolating WebViews from each other (eg, incognito mode in Chrome).
+There are two types of WebViews: offscreen and windowed. __See [this article](../general-use/introduction-to-web-views.html) for more information about using each.__
  
 #### Handling WebView Events
 The WebViewListener namespace contains a suite of special classes that you can use to respond to certain events in a WebView.
