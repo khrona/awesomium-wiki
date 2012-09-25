@@ -42,11 +42,11 @@ There are two types of JSObjects, **Local** and **Remote**.
 Local objects only have properties (no custom methods) and are primarily used for declaring data to pass to methods. Local objects can be created using the JSObject constructor:
 
 
-    {% highlight cpp %}
-    JSObject my_object;
-    my_object.SetProperty(WSLit("name"), WSLit("Bob"));
-    my_object.SetProperty(WSLit("age"), 42)
-    {% endhighlight %}
+{% highlight cpp %}
+JSObject my_object;
+my_object.SetProperty(WSLit("name"), WSLit("Bob"));
+my_object.SetProperty(WSLit("age"), 42)
+{% endhighlight %}
 
 #### Remote JSObjects
 
@@ -54,24 +54,28 @@ Remote objects live within the V8 engine in a separate process and can have both
 
 For example, say you had an object ‘Person’ in Javascript:
 
-	var Person = {
-	   name: 'Bob',
-	   age: 22,
-	};
+{% highlight js %}
+var Person = {
+   name: 'Bob',
+   age: 22,
+};
+{% endhighlight %}
 	
 You could then retrieve a copy of this object in C++:
 
-	JSValue my_value = web_view->ExecuteJavascriptWithResult("Person");
-	
-	if(my_value.IsObject()) {
-      JSObject& person = my_value.ToObject();
+{% highlight cpp %}
+JSValue my_value = web_view->ExecuteJavascriptWithResult("Person");
 
-      WebString name = person.GetProperty(WSLit("person")).ToString();
-      // value of name is 'Bob'
-      
-      int age = person.GetProperty(WSLit("age")).ToInteger();
-      // value of age is '22'
-	}
+if(my_value.IsObject()) {
+  JSObject& person = my_value.ToObject();
+
+  WebString name = person.GetProperty(WSLit("person")).ToString();
+  // value of name is 'Bob'
+     
+  int age = person.GetProperty(WSLit("age")).ToInteger();
+  // value of age is '22'
+}
+{% endhighlight %}
 
 ### JSValue Type: Arrays
 
@@ -79,19 +83,23 @@ On the C++ side, Arrays are modeled as a vector of JSValues (wrapped as JSArray)
 
 So, for example, if you had the following array in Javascript:
 
-	var myArray = [1, 2, "three", 4, "five"];
+{% highlight js %}
+var myArray = [1, 2, "three", 4, "five"];
+{% endhighlight %}
 	
 You could access it in C++ like so:
 
-	JSValue my_value = web_view->ExecuteJavascriptWithResult("myArray");
-	
-	if(my_value.IsArray()) {
-	   JSArray& myArray = myValue.ToArray();
-	
-	   int first = myArray[0].ToInteger(); // value is '1'
-	   int second = myArray[1].ToInteger();  // value is '2'
-	   WebString third = myArray[2].ToString(); // value is 'three'
-	}
+{% highlight cpp %}
+JSValue my_value = web_view->ExecuteJavascriptWithResult("myArray");
+
+if(my_value.IsArray()) {
+   JSArray& myArray = myValue.ToArray();
+
+   int first = myArray[0].ToInteger(); // value is '1'
+   int second = myArray[1].ToInteger();  // value is '2'
+   WebString third = myArray[2].ToString(); // value is 'three'
+}
+{% endhighlight %}
 
 ### Directly Calling JavaScript Functions
 
