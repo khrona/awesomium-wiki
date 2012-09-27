@@ -2,12 +2,13 @@
 layout: page
 title : Introduction to JavaScript Integration
 group: JavaScript Integration
+weight: 1
 
 ---
 
 ___This Section is Under Construction___
 
-Using Awesomium's API, you can create global Javascript objects and manipulate them directly from C++, call Javascript functions with native C++ variables, and evaluate arbitrary strings of Javascript. 
+Using our API you can communicate with web-pages through JavaScript: pass data to/from the page, bind custom methods, create persistent global objects, and evaluate arbitrary scripts.
 
 ## JSValue Class
 
@@ -50,9 +51,9 @@ my_object.SetProperty(WSLit("age"), 42)
 
 #### Remote JSObjects
 
-Remote objects live within the V8 engine in a separate process and can have both Properties and Methods. Method calls on Remote objects are proxied to the process and execute synchronously but may fail for various reasons (see `JSObject::last_error()`).
+Remote objects live within the V8 engine in a separate process and can have both Properties and Methods.
 
-For example, say you had an object ‘Person’ in Javascript:
+For example, say you had an object ‘Person’ in JavaScript:
 
 {% highlight js %}
 var Person = {
@@ -61,7 +62,7 @@ var Person = {
 };
 {% endhighlight %}
 	
-You could then retrieve a copy of this object in C++:
+You could then interact with this object in C++:
 
 {% highlight cpp %}
 JSValue my_value = web_view->ExecuteJavascriptWithResult("Person");
@@ -69,11 +70,30 @@ JSValue my_value = web_view->ExecuteJavascriptWithResult("Person");
 if(my_value.IsObject()) {
   JSObject& person = my_value.ToObject();
 
-  WebString name = person.GetProperty(WSLit("person")).ToString();
+  WebString name = person.GetProperty(WSLit("name")).ToString();
   // value of name is 'Bob'
      
   int age = person.GetProperty(WSLit("age")).ToInteger();
   // value of age is '22'
+}
+{% endhighlight %}
+
+##### Lifetime of Remote Objects
+
+All remote objects are reference-counted and collected by the V8 garbage collector. When you return an object to the main process via a JSObject proxy, this ref-count is incremented, and when the JSObject is destroyed, the ref-count is decremented.
+
+You can think of remote JSObjects as a pointer to a V8 object on the page. Every time you make a copy of a JSObject (via its copy-constructor), only the reference (remote ID) is copied; a deep copy is not made.
+
+When the V8 object goes away (usually due to a page navigation), the reference will no longer be valid and method calls may fail (see the section below). If you need an object to be persistent, you should create a Global JavaScript Object instead.
+
+##### Handling Errors
+
+Method calls on Remote objects are proxied to the child-process and execute synchronously but may fail for various reasons (see `JSObject::last_error()`).
+
+{% highlight cpp %}
+JSValue foobar = my_object.GetProperty(WSLit("foobar"));
+if (my_object.last_error() != kError_None) {
+  // handle error here (if any)
 }
 {% endhighlight %}
 
@@ -143,7 +163,7 @@ The above would create a global Javascript object that you can access as `MyObje
 
 You can coerce the result into an actual JSObject instance like so:
 
-    JSObject my_object = result.ToObject();
+    JSObject& my_object = result.ToObject();
     
 ### Setting Properties
 
