@@ -22,6 +22,16 @@ BitmapSurface* surface = static_cast<BitmapSurface>(my_web_view->surface());
 surface->SaveToJPEG(WSLit("C:\\bitmap.jpg"));
 {% endhighlight %}
 
+#### Defining Your Own SurfaceFactory
+
+If you want to intercept Paint/Scroll-Pixel events directly (eg., for writing to an OpenGL surface or streaming to a compressed video format), you can define your own Surface implementation via SurfaceFactory.
+
+First you'll need to define your own Surface implementation by sub-classing Surface.
+
+Then, you should define your own SurfaceFactory implementation that creates and destroys an instance of your custom Surface class.
+
+Next, you should register your SurfaceFactory with `WebCore::set_surface_factory`.
+
 ### Passing mouse input
 To interact with the WebView, you'll need to pass it mouse events. Here are some quick examples:
 
