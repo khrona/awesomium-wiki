@@ -127,74 +127,33 @@ You can call a Javascript function directly via `JSObject::Invoke`.
 
 Say you had the following function in Javascript:
 
-	function addChatMessage(nickname, message) {
-	   chat = document.getElementById('chat');
-	   chat.innerText = nickname + ": " + message;
-	}
+{% highlight js %}
+function addChatMessage(nickname, message) {
+  chat = document.getElementById('chat');
+  chat.innerText = nickname + ": " + message;
+}
+{% endhighlight %}
 	
 You can call it directly from C++ like so:
 
-    // Retrieve the global 'window' object from the page
-	JSValue window = web_view->ExecuteJavascriptWithResult(
-	  WSLit("window"), WSLit(""));
-	  
-	if (window.IsObject()) {
-      JSArray args;
-	  args.push_back("Bob");
-	  args.push_back("Hello world!");
+{% highlight cpp %}
+   // Retrieve the global 'window' object from the page
+JSValue window = web_view->ExecuteJavascriptWithResult(
+  WSLit("window"), WSLit(""));
+  
+if (window.IsObject()) {
+  JSArray args;
+  args.push_back("Bob");
+  args.push_back("Hello world!");
+
+  window.ToObject().Invoke(WSLit("addChatMessage"), args);
+}
+{% endhighlight %}
 	
-	  window.ToObject().Invoke(WSLit("addChatMessage"), args);
-	}
-	
-## Global Javascript Objects
+## Global JavaScript Objects
 
-The best way to integrate your application with a web-page is by using Global Javascript Objects. These objects are linked to the lifetime of the WebView so this feature is quite useful for specifying persistent data for each WebView.
+Sometimes you need objects to persist between pages (such as when exposing Application objects to a WebView). In such cases, you should use Global Javascript Objects, see the following article for more information: [Using Global JavaScript Objects](using-global-javascript-objects.html)
 
-### Creating Global JS Objects
+## Binding Custom Method Callbacks
 
-Creating, manipulating, and accessing these objects is very simple in our C++ API. To create an object, simply call `WebView::CreateGlobalJavaScriptObject` with the name that you want the object to appear as in Javascript.
-
-For example:
-
-	JSValue result = web_view->CreateGlobalJavascriptObject(
-	  WSLit("MyObject"));
-	
-The above would create a global Javascript object that you can access as `MyObject` from any web page loaded into your WebView.
-
-You can coerce the result into an actual JSObject instance like so:
-
-    JSObject& my_object = result.ToObject();
-    
-### Setting Properties
-
-Of course, creating objects alone isn’t very useful–- to give the object some properties, you can use `JSObject::SetProperty`:
-
-	my_object->SetProperty(WSLit("name"), WSLit("foobar"));
-	my_object->SetProperty(WSLit("color"), WSLit("Blue"));
-	my_object->SetProperty(WSLit("level"), 25);
-	
-You can set as many properties as you want, setting a property more than once will replace the previous value. Notice that the last parameter to `SetProperty` accepts a JSValue (more on that later).
-
-### Binding Custom Method Callbacks
-
-Another nifty feature of these global Javascript objects is that you can bind C++ callbacks to them and invoke events from Javascript. For example:
-
-	myWebView->SetCustomMethod(WSLit("myCallback"), false);
-
-The above code would add a new method, `myCallback`, to `MyObject` that, when called from any page via Javascript, will invoke `JSMethodHandler::OnMethodCall` with the object's remote ID, the name of the callback, and the arguments passed, if any.
-
-For example, say you made a button that calls “myCallback” with a single string argument (”hello!”) when clicked:
-
-	<input type="button" value="Click Me!"
-		onclick="MyObject.myCallback('hello!')" />
-		
-You could then intercept this callback in `JSMethodHandler::OnMethodCall` (you’ll need to register your JSMethodHandler first via `WebView::set_js_method_handler`):
-
-	void MyHandler::OnMethodCall(WebView* caller,
-                                 unsigned int remote_object_id, 
-                                 const WebString& method_name,
-                                 const JSArray& args) {
-		if(remote_object_id == my_object_id &&
-		   method_name == WSLit("myCallback"))
-			WebString value = args[0].toString(); // value is 'hello!'
-	}
+Another nifty feature of remote Javascript objects is that you can bind C++ callbacks to them and invoke them from JavaScript. See the following article for more information: [Binding Custom JavaScript Methods](binding-custom-javascript-methods.html)
