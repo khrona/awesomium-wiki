@@ -15,7 +15,7 @@ Here's an example:
 my_object->SetCustomMethod(WSLit("myCallback"), false);
 {% endhighlight %}
 
-The above code would add a new method, `myCallback`, to `MyObject` that, when called from any page via Javascript, will invoke `JSMethodHandler::OnMethodCall` with the object's remote ID, the name of the callback, and the arguments passed, if any.
+The above code would add a new method, `myCallback`, to `MyObject` that, when called from the page via Javascript, will invoke `JSMethodHandler::OnMethodCall` with the object's remote ID, the name of the callback, and the arguments passed, if any.
 
 For example, say you made a button that calls “myCallback” with a single string argument (”hello!”) when clicked:
 
