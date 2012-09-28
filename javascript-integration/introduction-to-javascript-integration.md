@@ -137,7 +137,7 @@ function addChatMessage(nickname, message) {
 You can call it directly from C++ like so:
 
 {% highlight cpp %}
-   // Retrieve the global 'window' object from the page
+// Retrieve the global 'window' object from the page
 JSValue window = web_view->ExecuteJavascriptWithResult(
   WSLit("window"), WSLit(""));
   
@@ -154,6 +154,6 @@ if (window.IsObject()) {
 
 Sometimes you need objects to persist between pages (such as when exposing Application objects to a WebView). In such cases, you should use Global Javascript Objects, see the following article for more information: [Using Global JavaScript Objects](using-global-javascript-objects.html)
 
-## Binding Custom Method Callbacks
+## Declaring Custom Method Callbacks
 
 Another nifty feature of remote Javascript objects is that you can declare custom methods to be handled in C++ and invoke them from JavaScript. See the following article for more information: [Declaring Custom JavaScript Methods](declaring-custom-javascript-methods.html)

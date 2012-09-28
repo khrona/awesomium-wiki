@@ -15,21 +15,30 @@ Creating, manipulating, and accessing these objects is very simple in our C++ AP
 
 For example:
 
-	JSValue result = web_view->CreateGlobalJavascriptObject(
-	  WSLit("MyObject"));
+{% highlight cpp %}
+JSValue result = web_view->CreateGlobalJavascriptObject(
+  WSLit("MyObject"));
+{% endhighlight %}
 	
 The above would create a global Javascript object that you can access as `MyObject` from any web page loaded into your WebView.
 
 You can coerce the result into an actual JSObject instance like so:
 
-    JSObject& my_object = result.ToObject();
+{% highlight cpp %}
+JSObject& my_object = result.ToObject();
+{% endhighlight %}
     
 ### Setting Properties
 
 Of course, creating objects alone isn’t very useful–- to give the object some properties, you can use `JSObject::SetProperty`:
 
-	my_object->SetProperty(WSLit("name"), WSLit("foobar"));
-	my_object->SetProperty(WSLit("color"), WSLit("Blue"));
-	my_object->SetProperty(WSLit("level"), 25);
+{% highlight cpp %}
+my_object->SetProperty(WSLit("name"), WSLit("foobar"));
+my_object->SetProperty(WSLit("color"), WSLit("Blue"));
+my_object->SetProperty(WSLit("level"), 25);
+{% endhighlight %}
 	
 You can set as many properties as you want, setting a property more than once will replace the previous value. Notice that the last parameter to `SetProperty` accepts a JSValue (more on that later).
+
+### Limitations of Global Objects
+

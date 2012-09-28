@@ -24,7 +24,7 @@ For example, say you made a button that calls “myCallback” with a single str
        onclick="MyObject.myCallback('hello!')" />
 {% endhighlight %}
 		
-You could then intercept this callback in `JSMethodHandler::OnMethodCall` (you’ll need to register your JSMethodHandler first via `WebView::set_js_method_handler`):
+You could then intercept this event in `JSMethodHandler::OnMethodCall` (you’ll need to register your JSMethodHandler first via `WebView::set_js_method_handler`):
 
 {% highlight cpp %}
 void MyHandler::OnMethodCall(WebView* caller,
@@ -36,5 +36,11 @@ void MyHandler::OnMethodCall(WebView* caller,
        WebString value = args[0].toString(); // value is 'hello!'
 }
 {% endhighlight %}
+
+### Remote ID Pitfalls
+
+Notice that `JSMethodHandler::OnMethodCall` only passes you `remote_object_id`. This is a unique ID for each remote object. If you try to bind a custom method to some temporary DOM object and that object goes away for whatever reason (page navigation, DOM change, etc.) your event may no longer be called.
+
+If you would like to expose a consistent event API for pages to invoke application-wide events, you should instead create a Global JavaScript Object (which has a consistent remote ID and persists through all pages) and bind custom methods to that.
 	
-### Declaring Methods with Return Values
+## Declaring Methods with Return Values
