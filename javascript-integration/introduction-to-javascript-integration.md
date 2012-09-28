@@ -156,4 +156,4 @@ Sometimes you need objects to persist between pages (such as when exposing Appli
 
 ## Binding Custom Method Callbacks
 
-Another nifty feature of remote Javascript objects is that you can bind C++ callbacks to them and invoke them from JavaScript. See the following article for more information: [Binding Custom JavaScript Methods](binding-custom-javascript-methods.html)
+Another nifty feature of remote Javascript objects is that you can declare custom methods to be handled in C++ and invoke them from JavaScript. See the following article for more information: [Declaring Custom JavaScript Methods](declaring-custom-javascript-methods.html)
