@@ -32,6 +32,8 @@ Then, you should define your own SurfaceFactory implementation that creates and 
 
 Next, you should register your SurfaceFactory with `WebCore::set_surface_factory`.
 
+Now, all WebViews should use your SurfaceFactory to create Surfaces, you should cast `WebView::surface()` to your Surface's type to interact with it.
+
 ### Passing mouse input
 To interact with the WebView, you'll need to pass it mouse events. Here are some quick examples:
 
