@@ -9,6 +9,14 @@ weight: 3
 
 There's only a few key concepts that you'll need to be familiar with to use Awesomium.
 
+### Including the API
+
+To use the majority of the API, you simply need to include one header:
+
+{% highlight cpp %}
+#include <Awesomium/WebCore.h>
+{% endhighlight %}
+
 ### The WebString
 
 The first of these is the WebString. This class is used to represent UTF-16 strings throughout our C++ API, here's an example of how to create one:
@@ -17,12 +25,13 @@ The first of these is the WebString. This class is used to represent UTF-16 stri
 WebString my_string = WebString::CreateFromUTF8("Hello", strlen("Hello"));
 size_t len = my_string.length(); // length is 5
 {% endhighlight %}
- 
 
 #### Using WebString with the STL
-We provide some additional convenience methods for converting to different string types inside the STLHelpers.h header. If your application uses the STL it's a good idea to include this header. Here's an example of use:
+We provide some additional convenience methods for converting to different string types inside the `STLHelpers.h` header. If your application uses the STL it's a good idea to include this header. Here's an example of use:
 
 {% highlight cpp %}
+#include <Awesomium/STLHelpers.h>
+
 // Initialize my_string with a C-string literal
 WebString my_string(WSLit("Hello World!"));
 
