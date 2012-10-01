@@ -68,6 +68,20 @@ If you would like to load local resources with your application we recommend usi
 
 See [this article](using-data-sources.html) for more information on using DataSource.
 
+### Asynchronous API
+
+Awesomium adopts a similar multi-process architecture to Chrome. Each WebView is actually isolated and rendered in a separate process.
+
+Most method calls are sent via a piped message to the child-process and may not complete immediately. To be notified of different events, see the following section on event listeners.
+
+You should take extra care with the few methods that are actually synchronous, you can use `WebView::last_error()` to check if there was an error dispatching a synchronous method call. For example, `WebView::ExecuteJavascriptWithResult` is sent synchronously because it must return a value:
+
+{% highlight cpp %}
+JSValue result = view->ExecuteJavascriptWithResult(script, frame);
+if (view->last_error())
+  std::cerr << "There was an error calling this synchronous method".
+{% endhighlight %}
+
 ### Registering Listeners
 
 The WebViewListener namespace contains a suite of special classes that you can use to respond to certain events in a WebView.

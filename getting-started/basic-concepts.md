@@ -98,18 +98,3 @@ There are two types of WebViews: __offscreen__ and __windowed__.
 
 __See [this article](../general-use/introduction-to-web-views.html) for more info about WebViews.__
  
-#### Handling WebView Events
-The WebViewListener namespace contains a suite of special classes that you can use to respond to certain events in a WebView.
-
-For example, to listen for all load-related events, you would simply make your own subclass of WebViewListener::Load and then register an instance of it to a certain WebView using `WebView::set_load_listener`. Here's a psuedo-example:
-
-{% highlight cpp %}
-// Define our WebViewListener::Load subclass
-class MyLoadListener : public Awesomium::WebViewListener::Load {
-  // ... All the overriden WebViewListener::Load methods go here
-};
-
-// Create an instance of MyLoadListener and register it to a certain WebView
-MyLoadListener* my_load_listener = new MyLoadListener();
-my_web_view->set_load_listener(my_load_listener);
-{% endhighlight %}
