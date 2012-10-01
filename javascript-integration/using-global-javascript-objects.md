@@ -42,3 +42,24 @@ You can set as many properties as you want, setting a property more than once wi
 
 ### Limitations of Global Objects
 
+Global Objects can only contain the following property types:
+
+- Number
+- String
+- Array
+- Other Global Objects
+- Null
+- Undefined
+
+Notice that this does NOT include regular JavaScript Objects (such as DOM objects or any other object defined on a page). This is because these objects are managed by the page's V8 context and will be destroyed at the end of the page's lifetime. If you attempt to add such objects to a Global JavaScript Object, they will be ignored (or filtered out).
+
+#### Creating a Child of a Global Object
+
+You can add a child object to a Global JavaScript Object if you declare it as Global as well. 
+
+For example:
+{% highlight cpp %}
+web_view->CreateGlobalJavascriptObject(WSLit("MyObject"));
+web_view->CreateGlobalJavascriptObject(WSLit("MyObject.MyChild"));
+{% endhighlight %}
+
