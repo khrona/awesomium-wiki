@@ -19,7 +19,7 @@ To use the majority of the API, you simply need to include one header:
 
 ### The WebString
 
-The first of these is the WebString. This class is used to represent UTF-16 strings throughout our C++ API, here's an example of how to create one:
+WebString is used to represent strings throughout our C++ API, it is a UTF-16 container format with some helpers for converting to/from UTF-8. Here's an example of how to create one:
 
 {% highlight cpp %}
 WebString my_string = WebString::CreateFromUTF8("Hello", strlen("Hello"));
