@@ -18,7 +18,7 @@ By default, the underlying Surface is of type BitmapSurface (you can specify you
 {% highlight cpp %}
 #include <Awesomium/BitmapSurface.h>
 
-BitmapSurface* surface = static_cast<BitmapSurface>(my_web_view->surface());
+BitmapSurface* surface = static_cast<BitmapSurface*>(my_web_view->surface());
 surface->SaveToJPEG(WSLit("C:\\bitmap.jpg"));
 {% endhighlight %}
 

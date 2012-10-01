@@ -45,6 +45,46 @@ view->set_parent_window(parent_hwnd);
 
 ### Loading Content
 
+The primary way to load content into a WebView is via `WebView::LoadURL`. For example, to begin navigating a WebView to Google, you would call:
+
+{% highlight cpp %}
+WebURL url(WSLit("http://www.google.com"));
+view->LoadURL(url);
+{% endhighlight %}
+
+All URLs should be properly formatted before passing it to LoadURL. You can check if a URL is valid via `WebURL::IsValid`:
+
+{% highlight cpp %}
+WebURL url(some_url_string);
+if (!url.IsValid())
+  std::cerr << "Error! URL was unable to be parsed.";
+{% endhighlight %}
+
+LoadURL makes it really easy to load remote content on the Internet, but what about local resources? 
+
+#### Defining a Custom DataSource
+
+If you would like to load local resources with your application we recommend using DataSource. This powerful bit of API allows you to provide a custom resource loader for a set of URLs that match a certain prefix.
+
+See [this article](using-data-sources.html) for more information on using DataSource.
+
 ### Registering Listeners
+
+The WebViewListener namespace contains a suite of special classes that you can use to respond to certain events in a WebView.
+
+For example, to listen for all load-related events, you would simply make your own subclass of WebViewListener::Load and then register an instance of it to a certain WebView using `WebView::set_load_listener`. Here's a psuedo-example:
+
+{% highlight cpp %}
+// Define our WebViewListener::Load subclass
+class MyLoadListener : public Awesomium::WebViewListener::Load {
+  // ... All the overriden WebViewListener::Load methods go here
+};
+
+// Create an instance of MyLoadListener and register it to a certain WebView
+MyLoadListener* my_load_listener = new MyLoadListener();
+my_web_view->set_load_listener(my_load_listener);
+{% endhighlight %}
+
+Please note that all WebViewListener events are dispatched asynchronously (meaning that the event may arrive a few milliseconds after the event actually happened in the child-process).
 
 ### Cleaning Up
