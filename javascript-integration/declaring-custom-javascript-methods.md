@@ -79,5 +79,5 @@ First, this type of callback is dispatched synchronously and blocks the child-pr
 
 You should try to use non-blocking methods (without return values) if at all possible.
 
-The other limitation of custom methods with retvals is that it __cannot pass back any remote JSObjects in the list of arguments__. The reason for this is because all methods of remote JSObjects must be dispatched synchronously to the child-process and so it would prompt a deadlock if we passed these back and you tried to make a call on them.
+The other limitation of methods with return values is that it __cannot pass any remote JSObjects in the list of arguments__. The reason for this is because all methods of remote JSObjects must be dispatched synchronously to the child-process and so it would prompt a deadlock if we passed these back and you tried to make a call on them.
 

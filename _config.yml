@@ -24,8 +24,6 @@ groups:
     path: /tutorials
   - name: General Use
     path: /general-use
-  - name: Graphics Integration
-    path: /graphics-integration
   - name: JavaScript Integration
     path: /javascript-integration
   - name: Third-Party Wrappers
