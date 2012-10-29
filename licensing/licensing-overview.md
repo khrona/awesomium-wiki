@@ -38,6 +38,8 @@ Our Pro License allows you to use Awesomium in a single commercial application (
 
 You may use any version of Awesomium v1.X (eg. 1.6, 1.7, 1.8, etc.) in your application with this license.
 
+You can buy this license online at https://www.awesomium.com/buy/
+
 #### Source-Code Access
 
 For pricing and terms regarding source code access, please contact us at sales@awesomium.com
