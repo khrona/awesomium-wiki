@@ -11,12 +11,12 @@ You can reduce the size of the Awesomium libraries by using **UPX** to compress 
 
 * Download the latest version of UPX for your platform, here: [http://upx.sourceforge.net/](http://upx.sourceforge.net/)
 * Copy the upx executable to the **_build/bin_** folder of the SDK.
-* Open a Console/Terminal window and navigate the **_build/bin_** folder of the SDK.
+* Open a Console/Terminal window and navigate to the **_build/bin_** folder of the SDK.
 * Execute the following commands:
 
 {% highlight bash %}
->upx --best --lzma awesomium.dll
->upx --best --lzma icudt.dll
+upx --best --lzma awesomium.dll
+upx --best --lzma icudt.dll
 {% endhighlight %}
 
 You can now delete the copy of the upx executable from the **_build/bin_** folder of the SDK.
