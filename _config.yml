@@ -14,7 +14,7 @@ tagline: Wiki for Awesomium, a Web UI Bridge for Native Apps
 author :
   name : Awesomium Team
   email : contact@khrona.com
-  github : khrona
+  github : awesomium
   twitter : awesomium
   
 groups:
@@ -28,6 +28,8 @@ groups:
     path: /javascript-integration
   - name: Third-Party Wrappers
     path: /third-party-wrappers
+  - name: Changelogs
+    path: /changelogs
   - name: Licensing
     path: /licensing
 
