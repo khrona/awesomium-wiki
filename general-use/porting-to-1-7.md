@@ -31,7 +31,7 @@ We recommend all users to use DataSources for local assets (instead of distribut
 
 Our entire JavaScript API has been rewritten so that users can manipulate V8 objects directly across process boundaries. Previously we only allowed "simple" JavaScript types and ignored any complex Objects. This prevented us from returning DOM elements or doing more exotic manipulation of objects on the page.
 
-We introduced the concept of "Remote" and "Local" JS Objects in 1.7. 
+We introduced the concept of **"Remote"** and **"Local"** JS Objects in 1.7. 
 
 Local objects only have properties (no custom methods) and are primarily used for declaring data to pass to methods. Local objects can be created using the JSObject constructor. (All JS Objects in 1.6 were Local)
 
@@ -44,4 +44,5 @@ See this article for more info: [Introduction to JavaScript Integration](http://
 There are some other API changes (most notably String types and WebPreferences) which you can learn more about in the following articles:
 
 [Basic Concepts](http://wiki.awesomium.com/getting-started/basic-concepts.html)
+
 [Introduction to WebViews](http://wiki.awesomium.com/general-use/introduction-to-web-views.html)
