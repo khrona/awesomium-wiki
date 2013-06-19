@@ -37,12 +37,11 @@ Local objects only have properties (no custom methods) and are primarily used fo
 
 Remote objects live within the V8 engine in a separate process and can have both Properties and Methods. These can only be returned by the WebView (they actually declared within the script context within the page).
 
-See this article for more info: http://wiki.awesomium.com/javascript-integration/introduction-to-javascript-integration.html
+See this article for more info: [Introduction to JavaScript Integration](http://wiki.awesomium.com/javascript-integration/introduction-to-javascript-integration.html)
 
 ## Other API Changes
 
 There are some other API changes (most notably String types and WebPreferences) which you can learn more about in the following articles:
 
-http://wiki.awesomium.com/getting-started/basic-concepts.html
-http://wiki.awesomium.com/general-use/introduction-to-web-views.html
-http://wiki.awesomium.com/javascript-integration/introduction-to-javascript-integration.html
+[Basic Concepts](http://wiki.awesomium.com/getting-started/basic-concepts.html)
+[Introduction to WebViews](http://wiki.awesomium.com/general-use/introduction-to-web-views.html)
