@@ -37,7 +37,19 @@ The SDK should contain the following folders in the installation directory:
 6. Add __awesomium.lib__ to __Additional Dependencies__ (should be under Configuration Properties -> Linker -> Input) for all build configurations.
 
 #### Copy files to your build distribution
-Before running your executable, __make sure to copy the entire contents__ of the SDK's __build/bin__ directory to your respective build directories. The only file that is optional is __inspector.pak__ (you only need to bundle it with your application if the remote inspector is enabled in WebConfig).
+Before running your executable, __make sure to copy the following files__ from the SDK's __build/bin__ directory to your respective build directories. 
+
+ * `avcodec-53.dll`
+ * `avformat-53.dll`
+ * `avutil-51.dll`
+ * `awesomium.dll`
+ * `awesomium_process.exe`
+ * `icudt.dll`
+ * `libEGL.dll`
+ * `libGLESv2.dll`
+ * `xinput9_1_0.dll`
+ 
+If you wish to use the remote inspector (see `WebConfig`), make sure to also copy `inspector.pak` to your working directory.
 
 ### Include the API
 To include the entire API for Awesomium in your source files, you simply need to include WebCore.h:

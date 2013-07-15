@@ -6,6 +6,15 @@ weight: 3
 
 ---
 
+### Creating an Offscreen Web-View
+
+You can create an offscreen Web-View via `WebCore::CreateWebView`. Here's an example of how to create such a view:
+
+{% highlight cpp %}
+// Create an offscreen WebView with initial size of 500 x 500
+WebView* view = web_core->CreateWebView(500, 500, 0, kWebViewType_Offscreen);
+{% endhighlight %}
+
 ### Displaying the Surface
 It is your responsibility to display offscreen WebViews and pass it input within your application. Each WebView has an abstract Surface that you can retrieve via WebView::surface (this instance is owned by the WebView, you shouldn't destroy it):
 

@@ -8,8 +8,6 @@ groups:
 ---
 {% include JB/setup %}
 
-___This Wiki is still a Work-In-Progress, use at your own risk___
-
 Awesomium is a Web UI Bridge for Native Applications. Leverage HTML/JS/CSS to build your application's front-end.
 
 Here you'll find tips, tricks, and tutorials for using the library in your own apps. All articles are compatible with the latest version of 1.7 only.

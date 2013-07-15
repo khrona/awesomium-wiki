@@ -39,7 +39,7 @@ Here's an example of how to create a windowed WebView on MS Windows:
 
 {% highlight cpp %}
 // Create a windowed WebView
-WebView* view = web_core->CreateWebView(500, 500, kWebViewType_Window);
+WebView* view = web_core->CreateWebView(500, 500, 0, kWebViewType_Window);
 view->set_parent_window(parent_hwnd);
 {% endhighlight %}
 
@@ -102,3 +102,5 @@ my_web_view->set_load_listener(my_load_listener);
 Please note that all WebViewListener events are dispatched asynchronously (meaning that the event may arrive a few milliseconds after the event actually happened in the child-process).
 
 ### Cleaning Up
+
+You should call `WebView::Destroy` once you are done using the WebView. You should try to avoid making this call from one of the WebViewListener or JSMethodHandler callbacks.

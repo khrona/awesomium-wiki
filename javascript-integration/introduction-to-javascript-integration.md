@@ -6,8 +6,6 @@ weight: 1
 
 ---
 
-___This Section is Under Construction___
-
 Using our API you can communicate with web-pages through JavaScript; pass data to/from the page, bind custom methods, create persistent global objects, and evaluate arbitrary scripts.
 
 ## JSValue Class

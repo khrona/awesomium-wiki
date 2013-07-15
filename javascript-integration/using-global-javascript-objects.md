@@ -40,6 +40,12 @@ my_object->SetProperty(WSLit("level"), 25);
 	
 You can set as many properties as you want, setting a property more than once will replace the previous value. Notice that the last parameter to `SetProperty` accepts a JSValue (more on that later).
 
+### Order of Initialization
+
+You'll need to create your Global Object before loading content into your WebView that references the object.
+
+All calls for creating the object and setting its properties should be made before calling `WebView::LoadURL`. `WebView::CreateGlobalJavaScriptObject` is a synchronous API call and is guaranteed to be completed once the method call returns. 
+
 ### Limitations of Global Objects
 
 Global Objects can only contain the following property types:
