@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
+@import url("//hello.myfonts.net/count/27ddd3");
+
+@font-face {font-family: 'NeoSansStd-Bold';src: url('/assets/themes/awesome/webfonts/27DDD3_0_0.eot');src: url('/assets/themes/awesome/webfonts/27DDD3_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/themes/awesome/webfonts/27DDD3_0_0.woff') format('woff'),url('/assets/themes/awesome/webfonts/27DDD3_0_0.ttf') format('truetype');}
 
 /* MeyerWeb Reset */
 
@@ -46,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul, ol, table, dl {
   margin:0 0 22px;
+  font-size: 18px;
 }
 
 h1, h2, h3 {
@@ -82,6 +86,9 @@ a {
   text-decoration: none;
   outline: 0;
   font-weight: bold;
+}
+
+p a {
   border-bottom: 1px solid #ccc;
 }
 
