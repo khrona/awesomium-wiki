@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 p, ul, ol, table, dl {
   margin:0 0 22px;
   font-size: 18px;
+  line-height: 1.45em;
 }
 
 h1, h2, h3 {
@@ -60,7 +61,6 @@ h1, h2, h3 {
 
 h1,h2, h3 {
 	display: block;
-	border-bottom: 1px solid #ccc;
 	padding-bottom: 5px;
 }
 
@@ -82,10 +82,9 @@ h4, h5, h6 {
 }
 
 a {
-  color: #333333;
+  color: #222;
   text-decoration: none;
   outline: 0;
-  font-weight: bold;
 }
 
 p a {
@@ -93,6 +92,7 @@ p a {
 }
 
 a:hover {
+  color: #ef4036;
 }
 
 a small {
@@ -236,9 +236,7 @@ td {
 /* Header */
 
 header {
-	background-color: #3d74da;
-	background-image: -webkit-radial-gradient(40% 20%, ellipse cover, #637DDE 0%, #3553C0 100%);
-	color: #FDFDFB;
+	background-color: #f0f0f2;
   width:210px;
   float:left;
   position:fixed;
@@ -302,14 +300,12 @@ h1.header div.clear {
 
 h3.header {
   font-size: 16px;
-  color: #FDFDFB;
   font-weight: bold;
   border: none;
   padding-bottom: 0;
 }
 
 h1.header, a.header, a.name, header a{
-	color: #fff;
   font-weight: 300;
 }
 
@@ -426,10 +422,6 @@ footer:hover {
     top: 0;
     left: auto;
     right: 5px;
-  }
-  
-  #main-site-link a {
-    color: white;
   }
 
   header, section, footer {
