@@ -27,19 +27,21 @@ time, mark, audio, video {
 
 body {
   padding:0px 50px 0 0;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	color: #232323;
-	background-color: #FBFAF7;
-	background-image: url('../images/white-linen.png');
 	margin: 0;
-	line-height: 1.5em;
-	-webkit-font-smoothing: antialiased;
+  font-family: 'proxima-nova', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+  line-height: 1.3;
+  color: #555163;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#232323;
   margin:36px 0 10px;
+  font-family: 'NeoSansStd-Bold', sans-serif;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400 !important;
+  color: #635e70;
 }
 
 p, ul, ol, table, dl {
@@ -76,13 +78,14 @@ h4, h5, h6 {
 }
 
 a {
-  color:#C30000;
-  font-weight:400;
-  text-decoration:none;
+  color: #333333;
+  text-decoration: none;
+  outline: 0;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
 }
 
 a:hover {
-	text-decoration: underline;
 }
 
 a small {
@@ -165,10 +168,10 @@ img {
 /* Code blocks */
 
 code, pre {
-  font-family: Consolas,"Liberation Mono",Courier,monospace;
-  color:#000;
   font-size:14px;
   line-height: 1.5em;
+  color: #726f80;
+  font-family: "source-code-pro", Consolas, 'Liberation Mono', Courier, monospace;
 }
 
 pre {
