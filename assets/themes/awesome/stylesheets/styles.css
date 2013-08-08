@@ -10,7 +10,7 @@ html,
 body {
   /* height: 100%; */
 
-  background-color: white;
+  background-color: #f0f0f2;
 }
 body {
   font-family: 'proxima-nova', sans-serif;
@@ -197,6 +197,12 @@ h5,
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 0.5em;
+}
+
+.page {
+  border: 1px solid #e8e8eb;
+  background-color: white;
+  box-shadow: 15px 40px 0px #e8e8eb;
 }
 
 section menu,
@@ -539,7 +545,8 @@ a.buttons:hover {
 
 section {
   width:650px;
-  float:left;
+  position: absolute;
+  left: 300px;
   padding-bottom:50px;
   border-left: 1px solid #ddd;
   padding-left: 3em;
