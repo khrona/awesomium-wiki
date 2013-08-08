@@ -1,9 +1,7 @@
-        <h1 class="header">
-          <a href="{{ HOME_PATH }}">
-            <img src="{{ ASSET_PATH }}/images/awe-flat-icon-logo.png" width="250" height="250" />
-            <div>The Wiki<div></a>
-          <div class="clear"></div>
-        </h1>
+        <div class="logo">
+            <a href="{{ HOME_PATH }}"><img src="{{ ASSET_PATH }}/images/awe-flat-icon-logo.png" width="125" height="125" /></a>
+            <a href="{{ HOME_PATH }}"><h1>The Wiki<h1></a>
+        </div>
         <p class="header"></p>
         
         <h3 class="header switch-container">
