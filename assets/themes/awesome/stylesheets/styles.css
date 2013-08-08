@@ -254,10 +254,15 @@ section pre {
   margin-bottom: 20px;
   padding: 6px 10px;
   word-wrap: break-word;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
+  background: #fafafc;
+  margin-left: -2.7em;
+  padding-left: 2.7em;
+  margin-right: -2.7em;
+  padding-right: 2.7em;
+  border-top: 1px solid #f0f0f2;
+  border-bottom: 1px solid #f0f0f2;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 section code {
   border: none;
@@ -546,7 +551,7 @@ section {
   position: absolute;
   left: 300px;
   padding-bottom: 50px;
-  padding-left: 3em;
+  padding-left: 2em;
   padding-top: 3.2em;
 }
 
