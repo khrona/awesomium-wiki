@@ -17,9 +17,11 @@ body {
   font-size: 100%;
   line-height: 1.3;
   color: #555163;
+  margin: 0;
+  padding: 0;
 }
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 a,
@@ -304,10 +306,12 @@ section object {
   height: auto;
 }
 
+section p, section li {
+  font-size: 16px;
+}
 section p {
   position: relative;
-  margin: 0 0 30px;
-  font-size: 18px;
+  margin: 0 0 1.2em;
 }
 section h3 {
   font-size: 1.25em;
@@ -415,10 +419,8 @@ strong {
 /* Header */
 
 header {
-	background-color: #f0f0f2;
   width:210px;
   float:left;
-  position:fixed;
 	border: none;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
@@ -429,6 +431,10 @@ header {
 	padding: 44px 25px 22px 40px;
 	margin: 30px 25px 0 0;
 	-webkit-font-smoothing: antialiased;
+}
+
+header h3 {
+  margin-bottom: 0.5em;
 }
 
 div.page-header h2 {
@@ -534,9 +540,10 @@ a.buttons:hover {
 
 section {
   width:650px;
-  float:right;
+  float:left;
   padding-bottom:50px;
-  padding-top: 10px;
+  border-left: 1px solid #ddd;
+  padding-left: 3em;
 }
 
 
