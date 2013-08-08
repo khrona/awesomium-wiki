@@ -55,9 +55,6 @@ a:visited:link {
 article a {
   border-bottom: 1px solid #ccc;
 }
-p a {
-  font-weight: bold;
-}
 .btn {
   border-radius: 5px;
   padding: 0.65em 2.6em .7em;
@@ -332,7 +329,6 @@ section li {
   margin: 0;
   margin-bottom: 10px;
   margin-top: 10px;
-  font-size: 1.1em;
 }
 section .intro,
 section blockquote {
