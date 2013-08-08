@@ -52,8 +52,8 @@ a:visited:link {
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
-article a {
-  border-bottom: 1px solid #ccc;
+section .row a {
+  border-bottom: 1px solid #bbb;
 }
 .btn {
   border-radius: 5px;
