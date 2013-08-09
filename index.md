@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome! (C++/Native API)
+title: Welcome!
 groups:
   - name: Getting Started
   - name: General Use
@@ -8,9 +8,9 @@ groups:
 ---
 {% include JB/setup %}
 
-Awesomium is an HTML UI Engine for Native Applications. It provides everything you need to start displaying beautiful HTML-powered interfaces and web-content within your application fast.
+Awesomium provides everything you need to start displaying beautiful HTML-powered interfaces and web-content within your C++ or .NET application fast.
 
-Here you'll find tips, tricks, and tutorials for using the library in your own apps. All articles are compatible with the latest version of 1.7 only.
+It takes only a minute to get started, begin by following the tutorials below. All articles are compatible with version 1.7+ only.
 
 {% for g in site.groups %}
 ### {{ g.name }}
