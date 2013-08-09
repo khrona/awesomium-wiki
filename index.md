@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome to the Awesomium Wiki
+title: Welcome! (C++/Native API)
 groups:
   - name: Getting Started
   - name: General Use
@@ -8,7 +8,7 @@ groups:
 ---
 {% include JB/setup %}
 
-Awesomium is a Web UI Bridge for Native Applications. Leverage HTML/JS/CSS to build your application's front-end.
+Awesomium is an HTML UI Engine for Native Applications. It provides everything you need to start displaying beautiful HTML-powered interfaces and web-content within your application fast.
 
 Here you'll find tips, tricks, and tutorials for using the library in your own apps. All articles are compatible with the latest version of 1.7 only.
 
