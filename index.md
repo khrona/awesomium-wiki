@@ -12,7 +12,7 @@ Awesomium provides everything you need to start displaying beautiful HTML-powere
 
 It takes only a minute to get started, begin by following the tutorials below.
 
-You are on the <span class="highlight">C++ Language Wiki</span>, click [this link](http://wiki.awesomium.net) for the .NET Language Wiki instead. All articles are compatible with version 1.7+ only.
+You are at the <span class="highlight">C++ Language</span> Wiki, to view the .NET Language Wiki please [click here](http://wiki.awesomium.net). All articles are compatible with version 1.7+ only.
 
 {% for g in site.groups %}
 ### {{ g.name }}
