@@ -614,7 +614,7 @@ footer:hover {
     width: 62px;
     height: 62px;
     float: left;
-    margin-left: 40px;
+    margin-left: 4em;
     margin-right: 20px;
     margin-top: 5px;
   }
@@ -623,7 +623,7 @@ footer:hover {
     position: fixed;
     top: 0;
     left: auto;
-    right: 30px;
+    right: 4em;
   }
 
   header, section, footer {
@@ -668,7 +668,7 @@ footer:hover {
   }
 
   section {
-    padding: 20px 40px 20px 40px;
+    padding: 20px 4em 20px 4em;
     margin:0 0 20px;
   }
 
