@@ -620,7 +620,7 @@ footer:hover {
   }
   
   #main-site-link {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: auto;
     right: 4em;
@@ -665,6 +665,13 @@ footer:hover {
   
   header p, header h3 {
     display: none;
+  }
+
+  header h3.switch-container {
+    display: block;
+    position: absolute;
+    right: 4em;
+    margin-top: -3em;
   }
 
   section {
