@@ -417,7 +417,7 @@ strong {
 
 #main-site-link {
   position: absolute;
-  left: 850px;
+  left: 885px;
   width: 150px;
   height: 25px;
   padding-top: 2px;
@@ -613,13 +613,17 @@ footer:hover {
     background-size: 62px 62px;
     width: 62px;
     height: 62px;
+    float: left;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 5px;
   }
   
   #main-site-link {
     position: fixed;
     top: 0;
     left: auto;
-    right: 5px;
+    right: 30px;
   }
 
   header, section, footer {
@@ -664,7 +668,7 @@ footer:hover {
   }
 
   section {
-    padding:20px 84px 20px 50px;
+    padding: 20px 40px 20px 40px;
     margin:0 0 20px;
   }
 
