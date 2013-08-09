@@ -319,6 +319,9 @@ section p {
   position: relative;
   margin: 0 0 1.2em;
 }
+section p.breadcrumb {
+  margin-bottom: 1em;
+}
 section h3 {
   font-size: 1.25em;
   margin-top: 1.7em;
@@ -545,9 +548,10 @@ section {
   width: 700px;
   position: absolute;
   left: 300px;
+  top: 20px;
   padding-bottom: 50px;
   padding-left: 2em;
-  padding-top: 3.2em;
+  padding-top: 2em;
 }
 
 .page {
