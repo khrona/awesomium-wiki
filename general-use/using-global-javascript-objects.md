@@ -1,7 +1,7 @@
 ---
 layout: page
 title : Using Global JavaScript Objects
-group: JavaScript Integration
+group: General Use
 
 ---
 

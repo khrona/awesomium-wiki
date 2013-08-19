@@ -1,7 +1,7 @@
 ---
 layout: page
 title : Declaring Custom JavaScript Methods
-group: JavaScript Integration
+group: General Use
 
 ---
 
