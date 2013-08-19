@@ -1,7 +1,7 @@
 ---
 layout: page
 title : Introduction to JavaScript Integration
-group: JavaScript Integration
+group: General Use
 weight: 1
 
 ---

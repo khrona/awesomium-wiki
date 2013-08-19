@@ -10,24 +10,20 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Awesomium Wiki
-tagline: Wiki for Awesomium, a Web UI Bridge for Native Apps
+tagline: Wiki for Awesomium, an HTML UI Engine for Native Apps
 author :
   name : Awesomium Team
-  email : contact@khrona.com
+  email : hello@awesomium.com
   github : awesomium
   twitter : awesomium
   
 groups:
   - name: Getting Started
     path: /getting-started
-  - name: Tutorials
-    path: /tutorials
   - name: General Use
     path: /general-use
-  - name: JavaScript Integration
-    path: /javascript-integration
-  - name: Third-Party Wrappers
-    path: /third-party-wrappers
+  - name: Tutorials
+    path: /tutorials
   - name: Changelogs
     path: /changelogs
   - name: Licensing

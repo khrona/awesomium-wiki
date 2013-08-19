@@ -2,7 +2,7 @@
 layout: page
 title : Distributing Awesomium With Your Application
 group: General Use
-weight: 5
+weight: 6
 ---
 
 ### What files should I include with my application?
