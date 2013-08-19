@@ -1,7 +1,7 @@
 ---
 layout: page
 title : Porting to 1.7
-group: General Use
+group: Changelogs
 
 ---
 
