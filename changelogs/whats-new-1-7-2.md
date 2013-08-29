@@ -1,6 +1,6 @@
 ---
 layout: page
-title : Release Notes for 1.7.2
+title : What's New in 1.7.2
 group: Changelogs
 weight: 1
 
