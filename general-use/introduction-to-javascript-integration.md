@@ -152,10 +152,10 @@ if (window.IsObject()) {
 
 Sometimes you need objects to persist between pages (such as when exposing Application objects to a WebView). In such cases, you should use Global Javascript Objects.
 
-<blockquote class="note">See [this article](using-global-javascript-objects.html) for more information on Global JavaScript Objects.</blockquote>
+> See [this article](using-global-javascript-objects.html) for more information on Global JavaScript Objects.
 
 ## Declaring Custom Method Callbacks
 
 Another nifty feature of remote Javascript objects is that you can declare custom methods to be handled in C++ and invoke them from JavaScript.
 
-<blockquote class="note">See [this article](declaring-custom-javascript-methods.html) for more information on Custom JavaScript Methods.</blockquote>
+> See [this article](declaring-custom-javascript-methods.html) for more information on Custom JavaScript Methods.
