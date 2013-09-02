@@ -66,7 +66,7 @@ LoadURL makes it really easy to load remote content on the Internet, but what ab
 
 If you would like to load local resources with your application we recommend using DataSource. This powerful bit of API allows you to provide a custom resource loader for a set of URLs that match a certain prefix.
 
-**See [this article](using-data-sources.html) for more information on using DataSource.**
+<blockquote class="note">See [this article](using-data-sources.html) for more information on using DataSource.</blockquote>
 
 ### Asynchronous API
 
