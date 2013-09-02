@@ -7,7 +7,7 @@ weight: 1
 ---
 {% include JB/setup %}
 
-<p class="highlight">These notes are for our Core (C++) library, <a href="http://wiki.awesomium.net/changelogs/whats-new-1-7-2.html">click here</a> for our .NET release notes.</p>
+<p class="highlight">These notes are for the core C++ library, <a href="http://wiki.awesomium.net/changelogs/whats-new-1-7-2.html">click here</a> for the .NET release notes.</p>
 
 
 ### Major Core Changes
