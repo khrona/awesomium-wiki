@@ -2,6 +2,7 @@
 layout: page
 title : Tutorial 1 - Hello Awesomium
 group: Tutorials
+weight: 1
 
 ---
 

@@ -2,6 +2,7 @@
 layout: page
 title : Tutorial 2 - Displaying Your First Page
 group: Tutorials
+weight: 2
 
 ---
 

@@ -2,6 +2,7 @@
 layout: page
 title : Tutorial 3 - Hooking Up Events
 group: Tutorials
+weight: 3
 
 ---
 
