@@ -53,6 +53,10 @@ Replace the `// <Set up your View here. >` code with the following, you'll need 
   }
 {% endhighlight %}
 
+Great, our app should now display the HTML file we created a little earlier. If you build and run now, you should get something that looks like this:
+
+![Screenshot 1](/assets/images/tutorial-3/screen-1.png)
+
 ### Create Global JavaScript Object
 
 ### Bind Custom Method
