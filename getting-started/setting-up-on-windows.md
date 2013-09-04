@@ -6,7 +6,7 @@ weight: 1
 
 ---
 
-> This tutorial assumes that you are developing a C++ application. If you are a developing a .NET/C# application please see our [.NET Wiki](http://wiki.awesomium.net/getting-started/) instead.
+> These notes are for developing a C++ application. If you are a developing a .NET/C# application please see our [.NET Wiki](http://wiki.awesomium.net/getting-started/) instead.
 
 ### Checklist
 You will need the following:
