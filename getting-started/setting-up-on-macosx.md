@@ -6,9 +6,7 @@ weight: 2
 
 ---
 
-### Before We Begin
-
-This tutorial assumes that you are developing a C++ application. If you are a developing a .NET/C# application please see our [.NET Wiki](http://wiki.awesomium.net/getting-started/) instead.
+> These notes are for developing a C++ application. If you are a developing a .NET/C# application please see our [.NET Wiki](http://wiki.awesomium.net/getting-started/) instead.
 
 ### Checklist
 
@@ -20,11 +18,9 @@ Before we begin, you'll need the following:
 
 ### Install the SDK
 
-After downloading the SDK, open up the DMG file (or, if you're using an experimental build, the ZIP file) and accept any license agreements that are displayed.
+Run the installer and follow the on-screen instructions. 
 
-Inside the distribution, you should find a build of **Awesomium.framework**.
-
-Copy Awesomium.framework to some folder on your hard drive-- just remember the path to the directory, you'll need it later.
+Once installation is complete you should find samples under your `/Applications` directory and a copy of `Awesomium.framework` at `/Library/Frameworks`
 
 ### Set up your project
 
