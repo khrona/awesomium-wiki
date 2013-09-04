@@ -12,7 +12,7 @@ weight: 2
 
 It's quite a bit of work to set up an empty Windows GDI or Mac OSX Cocoa application. To save some time we've gone ahead and done some of the work for you.
 
-Start by downloading one of the following frameworks and following the README for your platform:
+Start by downloading the framework below and following the README for your platform:
 
  * [Tutorial Framework for Awesomium (GitHub ZIP)](https://github.com/awesomium/tutorial-framework/archive/master.zip)
 
