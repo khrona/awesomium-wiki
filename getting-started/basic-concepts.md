@@ -93,7 +93,7 @@ WebSession* my_session = web_core->CreateWebSession(
   WSLit("C:\\Session Data Path"), WebPreferences());
 {% endhighlight %}
 
-__See [this article](../general-use/using-web-sessions.html) for more info about WebSessions.__
+> See [this article](/general-use/using-web-sessions.html) for more info about WebSessions.
 
 ### The WebView
 A WebView is like a tab in a browser. You load pages into a WebView, interact with it, and render it on-the-fly to a certain graphics surface. You create WebViews using the WebCore, here's an example:
@@ -105,5 +105,5 @@ WebView* my_web_view = web_core->CreateWebView(500, 500);
 
 There are two types of WebViews: __offscreen__ and __windowed__. 
 
-__See [this article](../general-use/introduction-to-web-views.html) for more info about WebViews.__
+> See [this article](/general-use/introduction-to-web-views.html) for more info about WebViews.
  
