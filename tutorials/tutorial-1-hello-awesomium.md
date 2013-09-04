@@ -6,15 +6,12 @@ weight: 1
 
 ---
 
-In this tutorial, we'll load a remote web-page into a WebView and save the result to a JPEG. This should give you a rough idea of how to use the native API.
+> Make sure you've read the [Getting Started](http://wiki.awesomium.com/getting-started/) articles.
 
+<p class="intro">In this tutorial, we'll load a remote page into a WebView and save the result to a JPEG.</p>
 ### Before We Begin
 
-Make sure you've read the [Getting Started](http://wiki.awesomium.com/getting-started/) articles.
-
-### Tutorial
-
-#### Start With This Code
+### Start With This Code
 
 Create a new file called __main.cc__ and add the following code to it:
 
@@ -41,7 +38,7 @@ int main() {
 {% endhighlight %}
 
 
-#### Initialize the Framework
+### Initialize the Framework
 
 The first thing we need to do in our program is initialize the WebCore. The WebCore singleton is resposible for creating views, loading resources, and dispatching events.
 
@@ -52,7 +49,7 @@ Let's initialize the WebCore using the default configuration settings, add the f
 WebCore* web_core = WebCore::Initialize(WebConfig());
 {% endhighlight %}
 
-#### Create the WebView
+### Create the WebView
 
 Now we can create a WebView (similar to a tab in Chrome) using the WebCore we just created. Let's create a WebView with the default settings (offscreen rendering surface, all session data will be stored in memory):
 
@@ -61,7 +58,7 @@ Now we can create a WebView (similar to a tab in Chrome) using the WebCore we ju
 WebView* view = web_core->CreateWebView(WIDTH, HEIGHT);
 {% endhighlight %}
 
-#### Load a Page
+### Load a Page
 
 Let's start loading a web-page into our view. It's a good time to mention that most API calls in Awesomium are asynchronous (they are not guaranteed to complete by the time the method returns).
 
@@ -73,7 +70,7 @@ view->LoadURL(url);
 
 By the way, `WSLit()` is a special helper function that lets you declare __WebString literals__. Most of our API uses UTF-16 strings (wrapped with `WebString`) but we added `WSLit()` so you can declare ASCII C-strings with minimal fuss.
 
-##### Wait Until the Page Has Finished Loading
+#### Wait Until the Page Has Finished Loading
 
 Now we need to wait for the view to finish loading the page. The easiest way to do this is to loop until `WebView::IsLoading` returns false. It's important that you always call `WebCore::Update` within your update loop to give the framework a chance to dispatch events.
 
@@ -88,7 +85,7 @@ Sleep(300);
 web_core->Update();
 {% endhighlight %}
 
-#### Save the Rendered Page to a JPEG
+### Save the Rendered Page to a JPEG
 
 Since our WebView is being rendered offscreen, we need to save our rendering surface to a JPEG so we can see the result.
 
@@ -108,7 +105,7 @@ if (surface != 0) {
 }
 {% endhighlight %}
 
-#### Clean Up
+### Clean Up
 
 Make sure to clean up everything that you create:
 
@@ -119,3 +116,5 @@ WebCore::Shutdown();
 {% endhighlight %}
 
 ### Further Reading
+
+ * [Tutorial 2 - Displaying Your First Page](/tutorials/tutorial-2-displaying-your-first-page.html)
