@@ -56,6 +56,28 @@ If you build and run this code, you should get something that looks likes this:
 
 ![Screenshot of Hello World](/assets/images/tutorial-2/screen-1.png)
 
+### Data URIs
+
+You'll notice that we used a special type of URL called a "Data URI" to load our custom HTML into our WebView. This is a quick and easy way to pass strings of HTML but it definitely is not the best way.
+
+#### Local HTML Files
+
+A better way might be to store our HTML content in a local file with our application.
+
+Create a new HTML file somewhere on your hard drive and add the following content to it 
+
+{% highlight html %}
+<html>
+<body>
+<h1>Hello World</h1>
+<script type="text/javascript">
+document.write("You are running Awesomium " + awesomium.version);
+</script>
+</body>
+</html>
+{% endhighlight %}
+
+
 
 
 ### Further Reading
