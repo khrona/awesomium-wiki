@@ -34,6 +34,24 @@ After setting up your project using the tutorial framework, open up `main.cc` an
   }
 {% endhighlight %}
 
+The `OnLoaded` method is called within the tutorial framework once the application has finished launching. This is your best chance to set up your WebViews and make them do interesting things.
+
+The framework uses a special wrapper class called `View` which consists of a platform window and a WebView. Notice the code above creates one View with dimensions of 512x512.
+
+If you ran this code right now, nothing would be displayed because the WebView contains no content. Let's fix that.
+
+Replace the `// <Set up your View here. >` code with the following:
+
+{% highlight cpp %}
+  // Inherited from Application::Listener
+  virtual void OnLoaded() {
+    view_ = View::Create(512, 512);
+
+    WebURL url(WSLit("data:text/html,<p>Hello World</p>"));
+    view_->web_view()->LoadURL(url);
+  }
+{% endhighlight %}
+
 
 ### Further Reading
 
