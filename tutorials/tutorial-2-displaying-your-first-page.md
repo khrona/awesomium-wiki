@@ -30,7 +30,6 @@ After setting up your project using the tutorial framework, open up `main.cc` an
   // Inherited from Application::Listener
   virtual void OnLoaded() {
     view_ = View::Create(512, 512);
-    view_->web_view()->LoadURL(WebURL(WSLit("http://www.google.com")));
      // < Set up your View here. >
   }
 {% endhighlight %}
