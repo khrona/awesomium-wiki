@@ -62,9 +62,9 @@ You'll notice that we used a special type of URL called a "Data URI" to load our
 
 #### Local HTML Files
 
-A better way might be to store our HTML content in a local file with our application.
+A better way might be to store our HTML content in a local file alongside our application.
 
-Create a new HTML file somewhere on your hard drive and add the following content to it 
+Create a new HTML file named `app.html` somewhere on your hard drive and add the following content to it:
 
 {% highlight html %}
 <html>
