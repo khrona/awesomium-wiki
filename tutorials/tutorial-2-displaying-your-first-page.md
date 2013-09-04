@@ -99,3 +99,4 @@ If you need a little more security or already have your own resource loader, we 
 
 ### Further Reading
 
+ * [Tutorial 3 - Hooking Up Events](/tutorials/tutorial-3-hooking-up-events.html)
