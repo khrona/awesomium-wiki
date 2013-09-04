@@ -27,6 +27,10 @@ The installer should install the includes and library files under a path which l
 
 To help you reference this path in your projects, an environment variable named `AWE_DIR` should have been defined during installation.
 
+__Awesomium Include Path__: `$(AWE_DIR)include`
+__Awesomium Lib Path__: `$(AWE_DIR)build\lib`
+__Awesomium Bin Path__: `$(AWE_DIR)build\bin`
+
 #### Folder Structure of the SDK
 The SDK should contain the following folders in the installation directory:
 
