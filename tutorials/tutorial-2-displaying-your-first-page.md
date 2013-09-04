@@ -54,9 +54,9 @@ Replace the `// <Set up your View here. >` code with the following:
 
 If you build and run this code, you should get something that looks likes this:
 
-![Screenshot of Hello World](/assets/images/tutorial-2/screen-1.png)
+![Screenshot 1](/assets/images/tutorial-2/screen-1.png)
 
-### Data URIs
+#### Data URIs
 
 You'll notice that we used a special type of URL called a "Data URI" to load our custom HTML into our WebView. This is a quick and easy way to pass strings of HTML but it definitely is not the best way.
 
@@ -77,7 +77,27 @@ document.write("You are running Awesomium " + awesomium.version);
 </html>
 {% endhighlight %}
 
+Now let's modify our code so that it loads our local HTML file instead, you'll need to edit the path so that it points to your file:
 
+{% highlight cpp %}
+  // Inherited from Application::Listener
+  virtual void OnLoaded() {
+    view_ = View::Create(500, 300);
+
+    WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
+    view_->web_view()->LoadURL(url);
+  }
+{% endhighlight %}
+
+If everything went as expected, you should get something similar to the following:
+
+![Screenshot 2](/assets/images/tutorial-2/screen-2.png)
+
+#### Custom Data Sources
+
+Loading local files is a great solution if you don't mind distributing all of your interface assets in one of your application's folders.
+
+If you need a little more security or already have your own resource loader, we recommend taking a look at our DataSource API. This powerful feature allows you to completely handle asset loading for your application, see [this article](/general-use/using-data-sources.html) for more information.
 
 
 ### Further Reading
