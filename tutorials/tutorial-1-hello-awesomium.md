@@ -6,12 +6,12 @@ weight: 1
 
 ---
 
-> Make sure you've read the [Getting Started](http://wiki.awesomium.com/getting-started/) articles.
-
 <p class="intro">In this tutorial, we'll load a remote page into a WebView and save the result to a JPEG.</p>
 ### Before We Begin
 
 ### Start With This Code
+
+> Make sure you've read the [Getting Started](http://wiki.awesomium.com/getting-started/) articles before we begin.
 
 Create a new file called __main.cc__ and add the following code to it:
 
