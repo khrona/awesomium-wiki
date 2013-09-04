@@ -47,9 +47,11 @@ Replace the `// <Set up your View here. >` code with the following, you'll need 
   // Inherited from Application::Listener
   virtual void OnLoaded() {
     view_ = View::Create(500, 300);
+    
+    WebView* web_view = view_->web_view();
 
     WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
-    view_->web_view()->LoadURL(url);
+    web_view->LoadURL(url);
   }
 {% endhighlight %}
 
@@ -69,11 +71,13 @@ Add the following code underneath your LoadURL code:
   // Inherited from Application::Listener
   virtual void OnLoaded() {
     view_ = View::Create(500, 300);
+    
+    WebView* web_view = view_->web_view();
 
     WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
-    view_->web_view()->LoadURL(url);
+    web_view->LoadURL(url);
     
-    JSValue result = view_->web_view()->CreateGlobalJavascriptObject(WSLit("app"));
+    JSValue result = web_view->CreateGlobalJavascriptObject(WSLit("app"));
   }
 {% endhighlight %}
 
