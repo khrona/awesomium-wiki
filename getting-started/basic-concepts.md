@@ -106,4 +106,8 @@ WebView* my_web_view = web_core->CreateWebView(500, 500);
 There are two types of WebViews: __offscreen__ and __windowed__. 
 
 > See [this article](/general-use/introduction-to-web-views.html) for more info about WebViews.
+
+### Further Reading
+
+ * [Tutorial 1 - Hello Awesomium](/tutorials/tutorial-1-hello-awesomium.html)
  
