@@ -17,24 +17,33 @@ You will need the following:
 * Microsoft Visual C++ (there is a free 'Express' version)
 
 ### Install the SDK
-After downloading the SDK, unzip the ZIP file to some convenient location.
+Run the installer and follow the on-screen instructions. Upon success, you should find a folder in your Start Menu with additional links and samples to play with.
+
+#### Environment Path
+
+The installer should install the includes and library files under a path which looks like the following:
+
+`C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.2.2`
+
+To help you reference this path in your projects, an environment variable named `AWE_DIR` should have been defined during installation.
 
 #### Folder Structure of the SDK
 The SDK should contain the following folders in the installation directory:
 
 * __build/bin__ folder: Contains DLLs that you will need to bundle with your application
+* __build/bin/packed__ folder: Contains optional compressed DLLs to use with your application (smaller size, very slight delay in load time).
 * __build/lib__ folder: Contains static libraries that you will need to link against your application.
 * __include__ folder: Contains headers that you will need to #include in your source files to access our C++ API
 
 ### Set up your project
 #### Configure project settings
 
-1. Create a new project in MSVC (the __Empty Project__ template is recommended).
+1. Create a new project in Microsoft Visual C++ (the __Empty Project__ template is recommended).
 2. Add your C++ source files.
 3. Right-click your project name, select __Properties__ to open up the __Property Pages__ dialog.
-4. Add the path to the SDK's __include__ folder to __Additional Include Directories__ (should be under Configuration Properties -> C/C++ -> General) for both Debug and Release configurations. 
-5. Add the paths to the SDK's __lib__ directory (e.g., build/lib) to __Additional Library Directories__ (should be under Configuration Properties -> Linker -> General) for all build configurations. 
-6. Add __awesomium.lib__ to __Additional Dependencies__ (should be under Configuration Properties -> Linker -> Input) for all build configurations.
+4. Add `$(AWE_DIR)include` to __Additional Include Directories__ (should be under Configuration Properties &rarr; C/C++ &rarr; General) for both Debug and Release configurations. 
+5. Add `$(AWE_DIR)build\lib` to __Additional Library Directories__ (should be under Configuration Properties &rarr; Linker &rarr; General) for all build configurations. 
+6. Add `awesomium.lib` to __Additional Dependencies__ (should be under Configuration Properties &rarr; Linker &rarr; Input) for all build configurations.
 
 #### Copy files to your build distribution
 Before running your executable, __make sure to copy the following files__ from the SDK's __build/bin__ directory to your respective build directories. 
