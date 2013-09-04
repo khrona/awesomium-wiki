@@ -65,7 +65,18 @@ You'll notice if you click the button right now, it won't do anything. We need t
 
 Let's create a special JavaScript object that will stay alive throughout the entire lifetime of our WebView. This will allow us to expose certain methods and properties that our pages can use via JavaScript.
 
-Add the following code underneath your LoadURL code:
+{% highlight cpp %}
+  // Inherited from Application::Listener
+  virtual void OnShutdown() {
+  }
+
+  void BindMethods(WebView* web_view) {
+    // Create a global js object named 'app'
+    JSValue result = web_view->CreateGlobalJavascriptObject(WSLit("app"));
+  }
+{% endhighlight %}
+
+And then add the following code underneath your LoadURL code:
 
 {% highlight cpp %}
   // Inherited from Application::Listener
@@ -77,11 +88,11 @@ Add the following code underneath your LoadURL code:
     WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
     web_view->LoadURL(url);
     
-    JSValue result = web_view->CreateGlobalJavascriptObject(WSLit("app"));
+    BindMethods(web_view);
   }
 {% endhighlight %}
 
-### Binding Custom Methods
+### Custom JavaScript Methods
 
 We now need to declare a custom method named `sayHello` to JavaScript and then bind this method to a callback in C++.
 
@@ -89,7 +100,7 @@ To do this, we're going to save some time and use a special helper class include
 
 #### Include MethodDispatcher
 
-At the top of your application, add `#include 'method_dispatcher.h` underneath `#include 'view.h`:
+At the top of your application, add `#include "method_dispatcher.h"` underneath `#include "view.h"`:
 
 {% highlight cpp %}
 #include "application.h"
@@ -102,6 +113,20 @@ At the top of your application, add `#include 'method_dispatcher.h` underneath `
 #endif
 
 using namespace Awesomium;
+{% endhighlight %}
+
+Alright, now we just need to add an instance of `MethodDispatcher` to our application class. 
+
+Find the top of your `TutorialApp` class and add `MethodDispatcher method_dispatcher_;` underneath `View* view_;`:
+
+{% highlight cpp %}
+using namespace Awesomium;
+
+class TutorialApp : public Application::Listener {
+  Application* app_;
+  View* view_;
+  MethodDispatcher method_dispatcher_;
+ public:
 {% endhighlight %}
 
 #### Define Our Callback
