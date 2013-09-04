@@ -29,7 +29,7 @@ After setting up your project using the tutorial framework, open up `main.cc` an
 {% highlight cpp %}
   // Inherited from Application::Listener
   virtual void OnLoaded() {
-    view_ = View::Create(512, 512);
+    view_ = View::Create(500, 300);
      // < Set up your View here. >
   }
 {% endhighlight %}
@@ -45,12 +45,17 @@ Replace the `// <Set up your View here. >` code with the following:
 {% highlight cpp %}
   // Inherited from Application::Listener
   virtual void OnLoaded() {
-    view_ = View::Create(512, 512);
+    view_ = View::Create(500, 300);
 
-    WebURL url(WSLit("data:text/html,<p>Hello World</p>"));
+    WebURL url(WSLit("data:text/html,<h1>Hello World</h1>"));
     view_->web_view()->LoadURL(url);
   }
 {% endhighlight %}
+
+If you build and run this code, you should get something that looks likes this:
+
+![Screenshot of Hello World](/assets/images/tutorial-2/screen-1.png)
+
 
 
 ### Further Reading
