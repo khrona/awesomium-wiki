@@ -31,6 +31,28 @@ Create a new HTML file named `app.html` somewhere on your hard drive and add the
 
 ### Load The File
 
+After setting up your project using the tutorial framework, open up `main.cc` and find the following code:
+
+{% highlight cpp %}
+  // Inherited from Application::Listener
+  virtual void OnLoaded() {
+    view_ = View::Create(500, 300);
+     // < Set up your View here. >
+  }
+{% endhighlight %}
+
+Replace the `// <Set up your View here. >` code with the following, you'll need to <span class="highlight">adjust the file path</span> so that it points to your own `app.html`:
+
+{% highlight cpp %}
+  // Inherited from Application::Listener
+  virtual void OnLoaded() {
+    view_ = View::Create(500, 300);
+
+    WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
+    view_->web_view()->LoadURL(url);
+  }
+{% endhighlight %}
+
 ### Create Global JavaScript Object
 
 ### Bind Custom Method
