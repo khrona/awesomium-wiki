@@ -26,12 +26,12 @@ It's important to note that we will be using Windowed WebViews (as opposed to Of
 
 After setting up your project using the tutorial framework, open up `main.cc` and find the following code:
 
-  // Inherited from Application::Listener
-  virtual void OnLoaded() {
-    view_ = View::Create(512, 512);
-    view_->web_view()->LoadURL(WebURL(WSLit("http://www.google.com")));
-    // < Set up your View here. >
-  }
+    // Inherited from Application::Listener
+    virtual void OnLoaded() {
+      view_ = View::Create(512, 512);
+      view_->web_view()->LoadURL(WebURL(WSLit("http://www.google.com")));
+      // < Set up your View here. >
+    }
 
 
 ### Further Reading
