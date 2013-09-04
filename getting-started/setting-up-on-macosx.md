@@ -44,6 +44,8 @@ There are actually a couple of ways you can do this:
 
 #### Copy the framework to your build distribution
 
+If you don't wish to install `Awesomium.framework` to your users' `/Library/Frameworks` folder, there are a couple other ways to bundle the framework with your application based on what you're building.
+
 ##### If your project is using an Application Bundle (e.g., you're creating a **Cocoa Application**):
 
 1.    Right-click your Application's name under **Targets** in XCode's **Groupes & Files** panel. 
