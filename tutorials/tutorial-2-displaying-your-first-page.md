@@ -97,7 +97,7 @@ If everything went as expected, you should get something similar to the followin
 
 Loading local files is a great solution if you don't mind distributing all of your interface assets in one of your application's folders.
 
-If you need a little more security or already have your own resource loader, we recommend taking a look at our [DataSource API]((/general-use/using-data-sources.html) for a better approach.
+If you need a little more security or already have your own resource loader, we recommend taking a look at our [DataSource API](/general-use/using-data-sources.html) for a better approach.
 
 ### Further Reading
 
