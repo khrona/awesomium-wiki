@@ -117,7 +117,7 @@ using namespace Awesomium;
 
 Alright, now we just need to add an instance of `MethodDispatcher` to our application class. 
 
-Find the top of your `TutorialApp` class and add `MethodDispatcher method_dispatcher_;` underneath `View* view_;`:
+Find the top of your `TutorialApp` class definition and then go ahead and add  `MethodDispatcher method_dispatcher_;` underneath `View* view_;`:
 
 {% highlight cpp %}
 using namespace Awesomium;
@@ -131,6 +131,42 @@ class TutorialApp : public Application::Listener {
 
 #### Define Our Callback
 
+Let's write the code that will be called by `app.sayHello()`. Add the following code underneath the `BindMethods` definition:
+
+{% highlight cpp %}
+  void BindMethods(WebView* web_view) {
+    // Create a global js object named 'app'
+    JSValue result = web_view->CreateGlobalJavascriptObject(WSLit("app"));
+  }
+
+  // Bound to app.sayHello() in JavaScript
+  void OnSayHello(WebView* caller,
+                  const JSArray& args) {
+    app_->ShowMessage("Hello!");
+  }
+{% endhighlight %}
+
 #### Bind Our Method
+
+Now we just need to hook everything up using the `MethodDispatcher` instance.
+
+Replace your `BindMethods` definition with the following:
+
+{% highlight cpp %}
+  void BindMethods(WebView* web_view) {
+    // Create a global js object named 'app'
+    JSValue result = web_view->CreateGlobalJavascriptObject(WSLit("app"));
+    if (result.IsObject()) {
+      // Bind our custom method to it.
+      JSObject& app_object = result.ToObject();
+      method_dispatcher_.Bind(app_object,
+        WSLit("sayHello"),
+        JSDelegate(this, &TutorialApp::OnSayHello));
+    }
+
+    // Bind our method dispatcher to the WebView
+    web_view->set_js_method_handler(&method_dispatcher_);
+  }
+{% endhighlight %}
 
 ### Further Reading
