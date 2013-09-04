@@ -6,7 +6,7 @@ weight: 2
 
 ---
 
-In this tutorial, we'll load our own HTML into a WebView and display it within a window.
+<p class="intro">In this tutorial, we'll load our own HTML into a WebView and display it within a window.</p>
 
 ### Start With This Code
 
