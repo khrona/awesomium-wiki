@@ -169,4 +169,104 @@ Replace your `BindMethods` definition with the following:
   }
 {% endhighlight %}
 
+If you run your application now and click on the `Say Hello` button, you should get a little message box like the following:
+
+![Screenshot 1](/assets/images/tutorial-3/screen-2.png)
+
+Congratulations, you've made your first interactive HTML interface!
+
+### Complete Code
+
+In case you had trouble following the tutorial, the complete code for `main.cc` has been included below (just remember to edit the file path for your `app.html`):
+
+{% highlight cpp %}
+#include "application.h"
+#include "view.h"
+#include "method_dispatcher.h"
+#include <Awesomium/WebCore.h>
+#include <Awesomium/STLHelpers.h>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+
+using namespace Awesomium;
+
+class TutorialApp : public Application::Listener {
+  Application* app_;
+  View* view_;
+  MethodDispatcher method_dispatcher_;
+ public:
+  TutorialApp() 
+    : app_(Application::Create()),
+      view_(0) {
+    app_->set_listener(this);
+  }
+
+  virtual ~TutorialApp() {
+    if (view_)
+      app_->DestroyView(view_);
+    if (app_)
+      delete app_;
+  }
+
+  void Run() {
+    app_->Run();
+  }
+
+  // Inherited from Application::Listener
+  virtual void OnLoaded() {
+    view_ = View::Create(500, 300);
+    WebView* web_view = view_->web_view();
+
+    WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
+    web_view->LoadURL(url);
+
+    BindMethods(web_view);
+  }
+
+  // Inherited from Application::Listener
+  virtual void OnUpdate() {
+  }
+
+  // Inherited from Application::Listener
+  virtual void OnShutdown() {
+  }
+
+  void BindMethods(WebView* web_view) {
+    // Create a global js object named 'app'
+    JSValue result = web_view->CreateGlobalJavascriptObject(WSLit("app"));
+    if (result.IsObject()) {
+      // Bind our custom method to it.
+      JSObject& app_object = result.ToObject();
+      method_dispatcher_.Bind(app_object,
+        WSLit("sayHello"),
+        JSDelegate(this, &TutorialApp::OnSayHello));
+    }
+
+    // Bind our method dispatcher to the WebView
+    web_view->set_js_method_handler(&method_dispatcher_);
+  }
+
+  // Bound to app.sayHello() in JavaScript
+  void OnSayHello(WebView* caller,
+                  const JSArray& args) {
+    app_->ShowMessage("Hello!");
+  }
+};
+
+#ifdef _WIN32
+int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, wchar_t*, 
+  int nCmdShow) {
+#else
+int main() {
+#endif
+
+  TutorialApp app;
+  app.Run();
+
+  return 0;
+}
+
+{% endhighlight %}
+
 ### Further Reading
