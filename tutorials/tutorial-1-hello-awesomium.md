@@ -7,7 +7,6 @@ weight: 1
 ---
 
 <p class="intro">In this tutorial, we'll load a remote page into a WebView and save the result to a JPEG.</p>
-### Before We Begin
 
 ### Start With This Code
 
