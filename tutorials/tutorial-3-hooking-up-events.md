@@ -81,6 +81,31 @@ Add the following code underneath your LoadURL code:
   }
 {% endhighlight %}
 
-### Bind Custom Method
+### Binding Custom Methods
+
+We now need to declare a custom method named `sayHello` to JavaScript and then bind this method to a callback in C++.
+
+To do this, we're going to save some time and use a special helper class included in the tutorial framework called `MethodDispatcher`.
+
+#### Include MethodDispatcher
+
+At the top of your application, add `#include 'method_dispatcher.h` underneath `#include 'view.h`:
+
+{% highlight cpp %}
+#include "application.h"
+#include "view.h"
+#include "method_dispatcher.h"
+#include <Awesomium/WebCore.h>
+#include <Awesomium/STLHelpers.h>
+#ifdef _WIN32
+#include <Windows.h>
+#endif
+
+using namespace Awesomium;
+{% endhighlight %}
+
+#### Define Our Callback
+
+#### Bind Our Method
 
 ### Further Reading
