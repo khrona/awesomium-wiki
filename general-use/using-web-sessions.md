@@ -53,3 +53,7 @@ my_session->Release();
 {% endhighlight %}
 
 The session will not be destroyed until all WebViews associated with it have been destroyed.
+
+### Further Reading
+
+ * [Introduction to Web-Views](http://wiki.awesomium.com/general-use/introduction-to-web-views.html)
