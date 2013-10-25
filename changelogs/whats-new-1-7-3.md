@@ -12,7 +12,7 @@ weight: 1
 
 ### Major Core Changes
 
- * Fixed bug within WebKit that caused GDI handles to constantly increase in main process.
+ * Fixed bug within WebKit that caused GDI handles to constantly increase in main process. [(issue #4)](https://github.com/awesomium/awesomium-pub/issues/4#issuecomment-27012277)
  * Added API to allow users to execute custom JavaScript at the very beginning of every frame.
 
 ### Major API Changes
