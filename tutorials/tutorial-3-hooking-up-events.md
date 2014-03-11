@@ -85,10 +85,10 @@ And then add the following code underneath your LoadURL code:
     
     WebView* web_view = view_->web_view();
 
+    BindMethods(web_view);
+
     WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
     web_view->LoadURL(url);
-    
-    BindMethods(web_view);
   }
 {% endhighlight %}
 
@@ -218,10 +218,10 @@ class TutorialApp : public Application::Listener {
     view_ = View::Create(500, 300);
     WebView* web_view = view_->web_view();
 
+    BindMethods(web_view);
+
     WebURL url(WSLit("file:///C:/Users/awesomium/Documents/app.html"));
     web_view->LoadURL(url);
-
-    BindMethods(web_view);
   }
 
   // Inherited from Application::Listener
