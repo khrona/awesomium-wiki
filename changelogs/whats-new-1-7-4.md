@@ -12,15 +12,15 @@ weight: 1
 
 ### Major Core Changes
  * Removed quota limit on local storage and session storage 
- * Fixed issue with WebConfig::user_script on Mac OSX
- * Fixed issue with about:blank being added to history at beginning of WebView lifetime
+ * Fixed issue with `WebConfig::user_script` on Mac OSX
+ * Fixed issue with `about:blank` being added to history at beginning of `WebView` lifetime
  * Fixed issue with PDF files not being downloaded when Adobe Reader is installed 
- * Fixed crash that occurs when JSObject::Invoke fails on executing a callback with invalid JavaScript
+ * Fixed crash that occurs when `JSObject::Invoke` fails on executing a callback with invalid JavaScript
  * Fixed crash issue when JavaScript is disabled
- * Fixed crash issue with requestQuota
- * Fixed crash when users hit CTRL+LEFT at beginning of line
+ * Fixed crash issue with `requestQuota`
+ * Fixed crash when users hit `CTRL+LEFT` at beginning of line
 
 ### Major API Changes
- * Added WebConfig::asset_protocol
- * Added catch-all rule to WebSession::AddDataSource
- * Added host and request parameters to DataSource::OnRequest
+ * Added `WebConfig::asset_protocol`
+ * Added catch-all rule to `WebSession::AddDataSource`
+ * Added host and request parameters to `DataSource::OnRequest`
