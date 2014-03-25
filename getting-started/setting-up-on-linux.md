@@ -23,7 +23,6 @@ Before we begin, you'll need the following:
  2. Open the Terminal.
  3. Change directories to the SDK files you just extracted.
  4. Run `sudo make all` to install the library to your machine.
- 5. Note: To run the WebFlow sample, you will also need to install SDL 1.2
 
 ### Run the Samples
 
@@ -47,3 +46,6 @@ To link against Awesomium 1.7.4 in your applications, just add "-lawesomium-1-7"
 
     g++ main.cpp -lawesomium-1-7
     
+   
+### Read some more articles
+* [Basic Concepts](basic-concepts.html)
