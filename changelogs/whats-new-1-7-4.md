@@ -24,3 +24,6 @@ weight: 1
  * Added `WebConfig::asset_protocol`
  * Added catch-all rule to `WebSession::AddDataSource`
  * Added host and request parameters to `DataSource::OnRequest`
+
+### .NET Changes
+ * <a href="http://wiki.awesomium.net/changelogs/whats-new-1-7-4.html">Click here</a> for the .NET notes
