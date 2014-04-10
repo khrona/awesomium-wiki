@@ -34,7 +34,7 @@ After setting up your project using the tutorial framework, open up `main.cc` an
 
 The `OnLoaded` method is called within the tutorial framework once the application has finished launching. This is your best chance to set up your WebViews and make them do interesting things.
 
-The framework uses a special wrapper class called `View` which consists of a platform window and a WebView. Notice the code above creates one View with dimensions of 512x512.
+The framework uses a special wrapper class called `View` which consists of a platform window and a WebView. Notice the code above creates one View with dimensions of 500x300.
 
 If you ran this code right now, nothing would be displayed because the WebView contains no content. Let's fix that.
 
