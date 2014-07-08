@@ -48,7 +48,7 @@ If you would like to expose a consistent event API for pages to invoke applicati
 You can also declare custom methods with return values by specifying `true` for the second parameter of `JSObject::SetCustomMethod`:
 
 {% highlight cpp %}
-my_object->SetCustomMethod(WSLit("myCallback2"), false);
+my_object->SetCustomMethod(WSLit("myCallback2"), true);
 {% endhighlight %}
 
 Now, when a user calls `MyObject.myCallback2` from JavaScript, it will make a synchronous call to `JSMethodHandler::OnMethodCallWithReturnValue`:
