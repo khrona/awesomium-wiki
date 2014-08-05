@@ -26,7 +26,8 @@ class MyDataSource : public DataSource {
   virtual ~MyDataSource { }
   
   virtual void OnRequest(int request_id,
-                         const WebString& path) {
+                         const Awesomium::ResourceRequest& request, 
+                         const Awesomium::WebString& path) {
     if (path == WSLit("index.html"))
       SendResponse(request_id,
                    strlen(html_str),
