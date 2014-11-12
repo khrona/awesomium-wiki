@@ -2,7 +2,7 @@
 layout: page
 title : What's New in 1.7.5
 group: Changelogs
-weight: 1
+weight: 5
 
 ---
 {% include JB/setup %}
